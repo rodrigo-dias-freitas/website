@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../public/assets/variables";
+@import "../public/assets/fonts";
+
+body{
+    font-family: var(--rdf__primary-font);
+    font-weight: var(--rdf__font-weight-300);
+    line-height: var(--rdf__line-height-regular);
+}
+.navbar>.container-fluid{
+    padding: 0;
+}
+.navbar{
+    background-color: var(--rdf__primary-100);
+    padding: 0;
+
+    .navbar-brand,
+    .nav-item,
+    .nav-link{
+        padding: 0 !important;
+    }
+    
+}
+.rdf__button{
+    &-primary{
+        background-color: var(--rdf__accent-100);
+        color: var(--rdf__background-100);
+    }
+}
+
+.rdf__element{
+    display: flex;
+    width: 155px;
+    flex-direction: column;
+    background-color: var(--rdf__background-100);
+    color: var(--rdf__neutral-100);
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-right: 1px solid var(--rdf__neutral-100);
+    border-bottom: 1px solid var(--rdf__neutral-100);
+    border-top: 1px solid var(--rdf__neutral-100);
+
+    &-number{
+        font-size: var(--rdf__font-size-regular);
+        margin: 0;
+    }
+    &-symbol{
+        font-size: 64px;
+        margin: 0;
+        font-weight: var(--rdf__font-weight-500);
+    }
+    &-name{
+        font-size: var(--rdf__font-size-regular);
+        margin: 0;
+    }
+    &-logo{
+        background-color: var(--rdf__highlight-100);
+    }
+
+    &:hover{
+        background-color: var(--rdf__highlight-100);
+    }
+}
+
+.rdf__line{
+    height: 12px;
+    background-color: var(--rdf__accent-100);
+    margin-bottom: 32px;
+}
+
+.rdf__title{
+    padding: 64px 0;
+
+    ul{
+        list-style: none;
+        padding-left: 0;
+
+        .h2{
+            font-size: 4rem;
+            font-weight: var(--rdf__font-weight-700);
+        }
+    }
+}
+.rdf__info{
+    background-color: var(--rdf__primary-100);
+    padding: 64px 0;
+
+    p{
+        color: var(--rdf__background-100);
+        font-family: var(--rdf__primary-font);
+        font-size: var(--rdf__font-size-regular);
+    }
+
+    .rdf__button-primary{
+        margin-top: 64px;
+    }
+}
+.rdf__banner{
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+
+    &-image{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &-text{
+        position: absolute;
+        top: 64px;
+        left: 0;
+        color: var(--rdf__background-100);
+
+        p{
+            font-size: 64px;
+            font-family: var(--rdf__primary-font);
+            line-height: 0.75;
+            font-weight: var(--rdf__font-weight-700);
+        }
+
+        &.container{
+            width: 90%; /* Ajuste de acordo com o quanto você quer que o texto ocupe */
+            max-width: 1200px; /* Limite de largura */
+            margin-left: 15%; /* Centraliza o container horizontalmente */
+        }
+
+        .rdf__button-primary{
+            margin-top: 64px;
+        }
+    }
+}

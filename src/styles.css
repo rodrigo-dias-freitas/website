@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Cor Primária */
+  --rdf__primary-100: #001133;
+  --rdf__primary-200: #001A3A;
+  --rdf__primary-300: #002266;
+  --rdf__primary-400: #000D1A;
+  --rdf__primary-500: #00061F;
+  /* Cor de Destaque */
+  --rdf__accent-100: #FF4433;
+  --rdf__accent-200: #FF6655;
+  --rdf__accent-300: #FF8877;
+  --rdf__accent-400: #CC3729;
+  --rdf__accent-500: #993026;
+  /* Cor de Realce */
+  --rdf__highlight-100: #FFDD00;
+  --rdf__highlight-200: #FFEE66;
+  --rdf__highlight-300: #FFFF99;
+  --rdf__highlight-400: #CCB300;
+  --rdf__highlight-500: #998900;
+  /* Cor de Fundo */
+  --rdf__background-100: #FFFFFF;
+  --rdf__background-200: #F2F2F2;
+  --rdf__background-300: #E6E6E6;
+  /* Cor Neutra */
+  --rdf__neutral-100: #333333;
+  --rdf__neutral-200: #4D4D4D;
+}
+
+:root {
+  --rdf__primary-font: "Roboto", system-ui;
+  --rdf__font-style-italic: "italic";
+  --rdf__font-weight-100: 100;
+  --rdf__font-weight-300: 300;
+  --rdf__font-weight-400: 400;
+  --rdf__font-weight-500: 500;
+  --rdf__font-weight-700: 700;
+  --rdf__font-weight-900: 900;
+  --rdf__font-size-regular: 1rem;
+  --rdf__font-size-big: 1.5rem;
+  --rdf__font-size-bigger: 1.75rem;
+  --rdf__font-size-biggest: 2rem;
+  --rdf__font-size-small: 0.75rem;
+  --rdf__font-size-smaller: 0.5rem;
+  --rdf__font-size-smallest: 0.25rem;
+  --rdf__line-height-regular: 1.5;
+}
+
+.roboto-thin {
+  font-family: "Roboto", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", system-ui;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", system-ui;
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  font-family: var(--rdf__primary-font);
+  font-weight: var(--rdf__font-weight-300);
+  line-height: var(--rdf__line-height-regular);
+}
+
+.navbar > .container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  background-color: var(--rdf__primary-100);
+  padding: 0;
+}
+.navbar .navbar-brand,
+.navbar .nav-item,
+.navbar .nav-link {
+  padding: 0 !important;
+}
+
+.rdf__button-primary {
+  background-color: var(--rdf__accent-100);
+  color: var(--rdf__background-100);
+}
+
+.rdf__element {
+  display: flex;
+  width: 155px;
+  flex-direction: column;
+  background-color: var(--rdf__background-100);
+  color: var(--rdf__neutral-100);
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-right: 1px solid var(--rdf__neutral-100);
+  border-bottom: 1px solid var(--rdf__neutral-100);
+  border-top: 1px solid var(--rdf__neutral-100);
+}
+.rdf__element-number {
+  font-size: var(--rdf__font-size-regular);
+  margin: 0;
+}
+.rdf__element-symbol {
+  font-size: 64px;
+  margin: 0;
+  font-weight: var(--rdf__font-weight-500);
+}
+.rdf__element-name {
+  font-size: var(--rdf__font-size-regular);
+  margin: 0;
+}
+.rdf__element-logo {
+  background-color: var(--rdf__highlight-100);
+}
+.rdf__element:hover {
+  background-color: var(--rdf__highlight-100);
+}
+
+.rdf__line {
+  height: 12px;
+  background-color: var(--rdf__accent-100);
+  margin-bottom: 32px;
+}
+
+.rdf__title {
+  padding: 64px 0;
+}
+.rdf__title ul {
+  list-style: none;
+  padding-left: 0;
+}
+.rdf__title ul .h2 {
+  font-size: 4rem;
+  font-weight: var(--rdf__font-weight-700);
+}
+
+.rdf__info {
+  background-color: var(--rdf__primary-100);
+  padding: 64px 0;
+}
+.rdf__info p {
+  color: var(--rdf__background-100);
+  font-family: var(--rdf__primary-font);
+  font-size: var(--rdf__font-size-regular);
+}
+.rdf__info .rdf__button-primary {
+  margin-top: 64px;
+}
+
+.rdf__banner {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+.rdf__banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.rdf__banner-text {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  color: var(--rdf__background-100);
+}
+.rdf__banner-text p {
+  font-size: 64px;
+  font-family: var(--rdf__primary-font);
+  line-height: 0.75;
+  font-weight: var(--rdf__font-weight-700);
+}
+.rdf__banner-text.container {
+  width: 90%; /* Ajuste de acordo com o quanto você quer que o texto ocupe */
+  max-width: 1200px; /* Limite de largura */
+  margin-left: 15%; /* Centraliza o container horizontalmente */
+}
+.rdf__banner-text .rdf__button-primary {
+  margin-top: 64px;
+}/*# sourceMappingURL=styles.css.map */
