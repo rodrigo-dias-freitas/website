@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../public/assets/variables";
-@import "../public/assets/fonts";
+@import "../public/assets/mixins";
 
+
+  
 body{
-    font-family: var(--rdf__primary-font);
-    font-weight: var(--rdf__font-weight-300);
-    line-height: var(--rdf__line-height-regular);
+    font-family: $primary-font;
+    font-weight: map-get($font-weights, light );
+    line-height: $line-height-regular;
 }
 .navbar>.container-fluid{
     padding: 0;
 }
 .navbar{
-    background-color: var(--rdf__primary-100);
+    @extend .bg-primary-100;
     padding: 0;
 
     .navbar-brand,
@@ -23,8 +25,8 @@ body{
 }
 .rdf__button{
     &-primary{
-        background-color: var(--rdf__accent-100);
-        color: var(--rdf__background-100);
+        @extend .bg-accent-100;
+        @extend .text-background-100;
     }
 }
 
@@ -32,40 +34,40 @@ body{
     display: flex;
     width: 155px;
     flex-direction: column;
-    background-color: var(--rdf__background-100);
-    color: var(--rdf__neutral-100);
+    @extend .bg-background-100;
+    @extend .text-neutral-100;
     align-items: center;
     justify-content: space-between;
     padding: 8px;
-    border-right: 1px solid var(--rdf__neutral-100);
-    border-bottom: 1px solid var(--rdf__neutral-100);
-    border-top: 1px solid var(--rdf__neutral-100);
+    border-right: 1px solid $neutral-100;
+    border-bottom: 1px solid $neutral-100;
+    border-top: 1px solid $neutral-100;
 
     &-number{
-        font-size: var(--rdf__font-size-regular);
+        font-size: map-get($font-sizes, regular);
         margin: 0;
     }
     &-symbol{
-        font-size: 64px;
+        font-size: 2*map-get($font-sizes, biggest);
         margin: 0;
-        font-weight: var(--rdf__font-weight-500);
+        font-weight: map-get($font-weights, medium);
     }
     &-name{
-        font-size: var(--rdf__font-size-regular);
+        font-size: map-get($font-sizes, regular);
         margin: 0;
     }
-    &-logo{
-        background-color: var(--rdf__highlight-100);
+    &.rdf__element-logo{
+        @extend .bg-highlight-100;
     }
 
     &:hover{
-        background-color: var(--rdf__highlight-100);
+        @extend .bg-highlight-100;
     }
 }
 
 .rdf__line{
     height: 12px;
-    background-color: var(--rdf__accent-100);
+    @extend .bg-accent-100;
     margin-bottom: 32px;
 }
 
@@ -77,19 +79,20 @@ body{
         padding-left: 0;
 
         .h2{
-            font-size: 4rem;
-            font-weight: var(--rdf__font-weight-700);
+            font-size: 2*map-get($font-sizes, biggest);
+            font-weight: map-get($font-weights, bold );
         }
     }
 }
 .rdf__info{
-    background-color: var(--rdf__primary-100);
+    @extend .bg-primary-100;
     padding: 64px 0;
 
     p{
-        color: var(--rdf__background-100);
-        font-family: var(--rdf__primary-font);
-        font-size: var(--rdf__font-size-regular);
+        @extend .bg-primary-100;
+        @extend .text-background-100;
+        font-family: $primary-font;
+        font-size: map-get($font-sizes, regular)
     }
 
     .rdf__button-primary{
@@ -112,13 +115,13 @@ body{
         position: absolute;
         top: 64px;
         left: 0;
-        color: var(--rdf__background-100);
+        @extend .text-background-100;
 
         p{
             font-size: 64px;
-            font-family: var(--rdf__primary-font);
+            font-family: $primary-font;
             line-height: 0.75;
-            font-weight: var(--rdf__font-weight-700);
+            font-weight: map-get($font-weights, bold);
         }
 
         &.container{
@@ -130,5 +133,44 @@ body{
         .rdf__button-primary{
             margin-top: 64px;
         }
+    }
+}
+.rdf__services{
+
+    padding: 96px 0 64px;
+
+    fieldset{
+        border-top: 1px solid $neutral-100;
+
+        legend{
+            margin-top: -55px;
+            @extend .bg-background-100;
+            width: 290px;
+            font-size: 2*map-get($font-sizes, biggest);
+            font-weight: map-get($font-weights, bold);
+        }
+    }
+
+    &-list{
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 96px;
+
+        li{
+            height: 64px;
+            margin-bottom: 32px;
+        }
+
+        img{
+            width: 64px;
+            height: 64px;
+        }
+    }
+
+    &-text{
+        font-family: $primary-font;
+        font-size: map-get($font-sizes, biggest);
+        margin-left: 16px;
     }
 }

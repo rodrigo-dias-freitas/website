@@ -1,33 +1,97 @@
-:root{
+// Cores Primárias
+$primary-100: #001133;
+$primary-200: #001A3A;
+$primary-300: #002266;
+$primary-400: #000D1A;
+$primary-500: #00061F;
 
-    /* Cor Primária */
-    --rdf__primary-100: #001133;
-    --rdf__primary-200: #001A3A;
-    --rdf__primary-300: #002266;
-    --rdf__primary-400: #000D1A;
-    --rdf__primary-500: #00061F;
+// Cores de Destaque
+$accent-100: #FF4433;
+$accent-200: #FF6655;
+$accent-300: #FF8877;
+$accent-400: #CC3729;
+$accent-500: #993026;
 
-    /* Cor de Destaque */
-    --rdf__accent-100: #FF4433;
-    --rdf__accent-200: #FF6655;
-    --rdf__accent-300: #FF8877;
-    --rdf__accent-400: #CC3729;
-    --rdf__accent-500: #993026;
-    
-    /* Cor de Realce */
-    --rdf__highlight-100: #FFDD00;
-    --rdf__highlight-200: #FFEE66;
-    --rdf__highlight-300: #FFFF99;
-    --rdf__highlight-400: #CCB300;
-    --rdf__highlight-500: #998900;
-    
-    /* Cor de Fundo */
-    --rdf__background-100: #FFFFFF;
-    --rdf__background-200: #F2F2F2;
-    --rdf__background-300: #E6E6E6;
-    
-    /* Cor Neutra */
-    --rdf__neutral-100: #333333;
-    --rdf__neutral-200: #4D4D4D;
+// Cores de Realce
+$highlight-100: #FFDD00;
+$highlight-200: #FFEE66;
+$highlight-300: #FFFF99;
+$highlight-400: #CCB300;
+$highlight-500: #998900;
 
-}
+// Cores de Fundo
+$background-100: #FFFFFF;
+$background-200: #F2F2F2;
+$background-300: #E6E6E6;
+
+// Cores Neutras
+$neutral-100: #333333;
+$neutral-200: #4D4D4D;
+
+
+$primary-font: "Roboto", system-ui;
+
+$font-weights: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  bolder: 900
+);
+
+$font-sizes: (
+  regular: 1rem,
+  big: 1.5rem,
+  bigger: 1.75rem,
+  biggest: 2rem,
+  small: 0.75rem,
+  smaller: 0.5rem,
+  smallest: 0.25rem
+);
+
+$primary-colors: (
+  100: $primary-100,
+  200: $primary-200,
+  300: $primary-300,
+  400: $primary-400,
+  500: $primary-500
+);
+
+$accent-colors: (
+  100: $accent-100,
+  200: $accent-200,
+  300: $accent-300,
+  400: $accent-400,
+  500: $accent-500
+);
+
+$highlight-colors: (
+  100: $highlight-100,
+  200: $highlight-200,
+  300: $highlight-300,
+  400: $highlight-400,
+  500: $highlight-500
+);
+
+$background-colors: (
+  100: $background-100,
+  200: $background-200,
+  300: $background-300
+);
+
+$neutral-colors: (
+  100: $neutral-100,
+  200: $neutral-200
+);
+
+$line-height-regular: 1.5;
+
+// Agrupando os mapas de cores em um único mapa
+$color-groups: (
+  primary: $primary-colors,
+  accent: $accent-colors,
+  highlight: $highlight-colors,
+  background: $background-colors,
+  neutral: $neutral-colors
+);

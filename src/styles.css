@@ -1,85 +1,8 @@
 @charset "UTF-8";
 /* You can add global styles to this file, and also import other style files */
-:root {
-  /* Cor Primária */
-  --rdf__primary-100: #001133;
-  --rdf__primary-200: #001A3A;
-  --rdf__primary-300: #002266;
-  --rdf__primary-400: #000D1A;
-  --rdf__primary-500: #00061F;
-  /* Cor de Destaque */
-  --rdf__accent-100: #FF4433;
-  --rdf__accent-200: #FF6655;
-  --rdf__accent-300: #FF8877;
-  --rdf__accent-400: #CC3729;
-  --rdf__accent-500: #993026;
-  /* Cor de Realce */
-  --rdf__highlight-100: #FFDD00;
-  --rdf__highlight-200: #FFEE66;
-  --rdf__highlight-300: #FFFF99;
-  --rdf__highlight-400: #CCB300;
-  --rdf__highlight-500: #998900;
-  /* Cor de Fundo */
-  --rdf__background-100: #FFFFFF;
-  --rdf__background-200: #F2F2F2;
-  --rdf__background-300: #E6E6E6;
-  /* Cor Neutra */
-  --rdf__neutral-100: #333333;
-  --rdf__neutral-200: #4D4D4D;
-}
-
-:root {
-  --rdf__primary-font: "Roboto", system-ui;
-  --rdf__font-style-italic: "italic";
-  --rdf__font-weight-100: 100;
-  --rdf__font-weight-300: 300;
-  --rdf__font-weight-400: 400;
-  --rdf__font-weight-500: 500;
-  --rdf__font-weight-700: 700;
-  --rdf__font-weight-900: 900;
-  --rdf__font-size-regular: 1rem;
-  --rdf__font-size-big: 1.5rem;
-  --rdf__font-size-bigger: 1.75rem;
-  --rdf__font-size-biggest: 2rem;
-  --rdf__font-size-small: 0.75rem;
-  --rdf__font-size-smaller: 0.5rem;
-  --rdf__font-size-smallest: 0.25rem;
-  --rdf__line-height-regular: 1.5;
-}
-
 .roboto-thin {
   font-family: "Roboto", system-ui;
   font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light {
-  font-family: "Roboto", system-ui;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: "Roboto", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: "Roboto", system-ui;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: "Roboto", system-ui;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", system-ui;
-  font-weight: 900;
   font-style: normal;
 }
 
@@ -89,10 +12,22 @@
   font-style: italic;
 }
 
+.roboto-light {
+  font-family: "Roboto", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
 .roboto-light-italic {
   font-family: "Roboto", system-ui;
   font-weight: 300;
   font-style: italic;
+}
+
+.roboto-regular {
+  font-family: "Roboto", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .roboto-regular-italic {
@@ -101,10 +36,22 @@
   font-style: italic;
 }
 
+.roboto-medium {
+  font-family: "Roboto", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .roboto-medium-italic {
   font-family: "Roboto", system-ui;
   font-weight: 500;
   font-style: italic;
+}
+
+.roboto-bold {
+  font-family: "Roboto", system-ui;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .roboto-bold-italic {
@@ -113,16 +60,182 @@
   font-style: italic;
 }
 
-.roboto-black-italic {
+.roboto-bolder {
+  font-family: "Roboto", system-ui;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-bolder-italic {
   font-family: "Roboto", system-ui;
   font-weight: 900;
   font-style: italic;
 }
 
+.bg-primary-100, .rdf__info p, .rdf__info, .navbar {
+  background-color: #001133;
+}
+
+.text-primary-100 {
+  color: #001133;
+}
+
+.bg-primary-200 {
+  background-color: #001A3A;
+}
+
+.text-primary-200 {
+  color: #001A3A;
+}
+
+.bg-primary-300 {
+  background-color: #002266;
+}
+
+.text-primary-300 {
+  color: #002266;
+}
+
+.bg-primary-400 {
+  background-color: #000D1A;
+}
+
+.text-primary-400 {
+  color: #000D1A;
+}
+
+.bg-primary-500 {
+  background-color: #00061F;
+}
+
+.text-primary-500 {
+  color: #00061F;
+}
+
+.bg-accent-100, .rdf__line, .rdf__button-primary {
+  background-color: #FF4433;
+}
+
+.text-accent-100 {
+  color: #FF4433;
+}
+
+.bg-accent-200 {
+  background-color: #FF6655;
+}
+
+.text-accent-200 {
+  color: #FF6655;
+}
+
+.bg-accent-300 {
+  background-color: #FF8877;
+}
+
+.text-accent-300 {
+  color: #FF8877;
+}
+
+.bg-accent-400 {
+  background-color: #CC3729;
+}
+
+.text-accent-400 {
+  color: #CC3729;
+}
+
+.bg-accent-500 {
+  background-color: #993026;
+}
+
+.text-accent-500 {
+  color: #993026;
+}
+
+.bg-highlight-100, .rdf__element:hover, .rdf__element.rdf__element-logo {
+  background-color: #FFDD00;
+}
+
+.text-highlight-100 {
+  color: #FFDD00;
+}
+
+.bg-highlight-200 {
+  background-color: #FFEE66;
+}
+
+.text-highlight-200 {
+  color: #FFEE66;
+}
+
+.bg-highlight-300 {
+  background-color: #FFFF99;
+}
+
+.text-highlight-300 {
+  color: #FFFF99;
+}
+
+.bg-highlight-400 {
+  background-color: #CCB300;
+}
+
+.text-highlight-400 {
+  color: #CCB300;
+}
+
+.bg-highlight-500 {
+  background-color: #998900;
+}
+
+.text-highlight-500 {
+  color: #998900;
+}
+
+.bg-background-100, .rdf__services fieldset legend, .rdf__element {
+  background-color: #FFFFFF;
+}
+
+.text-background-100, .rdf__banner-text, .rdf__info p, .rdf__button-primary {
+  color: #FFFFFF;
+}
+
+.bg-background-200 {
+  background-color: #F2F2F2;
+}
+
+.text-background-200 {
+  color: #F2F2F2;
+}
+
+.bg-background-300 {
+  background-color: #E6E6E6;
+}
+
+.text-background-300 {
+  color: #E6E6E6;
+}
+
+.bg-neutral-100 {
+  background-color: #333333;
+}
+
+.text-neutral-100, .rdf__element {
+  color: #333333;
+}
+
+.bg-neutral-200 {
+  background-color: #4D4D4D;
+}
+
+.text-neutral-200 {
+  color: #4D4D4D;
+}
+
 body {
-  font-family: var(--rdf__primary-font);
-  font-weight: var(--rdf__font-weight-300);
-  line-height: var(--rdf__line-height-regular);
+  font-family: "Roboto", system-ui;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 .navbar > .container-fluid {
@@ -130,7 +243,6 @@ body {
 }
 
 .navbar {
-  background-color: var(--rdf__primary-100);
   padding: 0;
 }
 .navbar .navbar-brand,
@@ -139,47 +251,32 @@ body {
   padding: 0 !important;
 }
 
-.rdf__button-primary {
-  background-color: var(--rdf__accent-100);
-  color: var(--rdf__background-100);
-}
-
 .rdf__element {
   display: flex;
   width: 155px;
   flex-direction: column;
-  background-color: var(--rdf__background-100);
-  color: var(--rdf__neutral-100);
   align-items: center;
   justify-content: space-between;
   padding: 8px;
-  border-right: 1px solid var(--rdf__neutral-100);
-  border-bottom: 1px solid var(--rdf__neutral-100);
-  border-top: 1px solid var(--rdf__neutral-100);
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
 }
 .rdf__element-number {
-  font-size: var(--rdf__font-size-regular);
+  font-size: 1rem;
   margin: 0;
 }
 .rdf__element-symbol {
-  font-size: 64px;
+  font-size: 4rem;
   margin: 0;
-  font-weight: var(--rdf__font-weight-500);
+  font-weight: 500;
 }
 .rdf__element-name {
-  font-size: var(--rdf__font-size-regular);
+  font-size: 1rem;
   margin: 0;
 }
-.rdf__element-logo {
-  background-color: var(--rdf__highlight-100);
-}
-.rdf__element:hover {
-  background-color: var(--rdf__highlight-100);
-}
-
 .rdf__line {
   height: 12px;
-  background-color: var(--rdf__accent-100);
   margin-bottom: 32px;
 }
 
@@ -192,17 +289,15 @@ body {
 }
 .rdf__title ul .h2 {
   font-size: 4rem;
-  font-weight: var(--rdf__font-weight-700);
+  font-weight: 700;
 }
 
 .rdf__info {
-  background-color: var(--rdf__primary-100);
   padding: 64px 0;
 }
 .rdf__info p {
-  color: var(--rdf__background-100);
-  font-family: var(--rdf__primary-font);
-  font-size: var(--rdf__font-size-regular);
+  font-family: "Roboto", system-ui;
+  font-size: 1rem;
 }
 .rdf__info .rdf__button-primary {
   margin-top: 64px;
@@ -223,13 +318,12 @@ body {
   position: absolute;
   top: 64px;
   left: 0;
-  color: var(--rdf__background-100);
 }
 .rdf__banner-text p {
   font-size: 64px;
-  font-family: var(--rdf__primary-font);
+  font-family: "Roboto", system-ui;
   line-height: 0.75;
-  font-weight: var(--rdf__font-weight-700);
+  font-weight: 700;
 }
 .rdf__banner-text.container {
   width: 90%; /* Ajuste de acordo com o quanto você quer que o texto ocupe */
@@ -238,4 +332,36 @@ body {
 }
 .rdf__banner-text .rdf__button-primary {
   margin-top: 64px;
+}
+
+.rdf__services {
+  padding: 96px 0 64px;
+}
+.rdf__services fieldset {
+  border-top: 1px solid #333333;
+}
+.rdf__services fieldset legend {
+  margin-top: -55px;
+  width: 290px;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.rdf__services-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 96px;
+}
+.rdf__services-list li {
+  height: 64px;
+  margin-bottom: 32px;
+}
+.rdf__services-list img {
+  width: 64px;
+  height: 64px;
+}
+.rdf__services-text {
+  font-family: "Roboto", system-ui;
+  font-size: 2rem;
+  margin-left: 16px;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,29 @@
+// Mixin para fontes com estilo e peso dinâmicos
+@mixin font-style($weight, $italic: false) {
+    font-family: $primary-font;
+    font-weight: map-get($font-weights, $weight);
+    font-style: if($italic, italic, normal);
+  }
+
+  // Gerando todas as classes de peso
+@each $name, $weight in $font-weights {
+    .roboto-#{$name} {
+      @include font-style($name);
+    }
+  
+    .roboto-#{$name}-italic {
+      @include font-style($name, true);
+    }
+}
+// Gerar classes de background e texto dinamicamente para todos os grupos de cores
+@each $type, $colors in $color-groups {
+    @each $name, $color in $colors {
+      .bg-#{$type}-#{$name} {
+        background-color: $color;
+      }
+      .text-#{$type}-#{$name} {
+        color: $color;
+      }
+    }
+  }
+  
