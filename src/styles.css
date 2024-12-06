@@ -72,7 +72,7 @@
   font-style: italic;
 }
 
-.bg-primary-100, .rdf__info p, .rdf__info, .navbar {
+.bg-primary-100, footer, .rdf__info p, .rdf__info, .navbar {
   background-color: #001133;
 }
 
@@ -188,11 +188,11 @@
   background-color: #998900;
 }
 
-.text-highlight-500 {
+.text-highlight-500, .rdf__link {
   color: #998900;
 }
 
-.bg-background-100, .rdf__services fieldset legend, .rdf__element {
+.bg-background-100, .rdf__portfolio fieldset legend, .rdf__services fieldset legend, .rdf__element {
   background-color: #FFFFFF;
 }
 
@@ -364,4 +364,36 @@ body {
   font-family: "Roboto", system-ui;
   font-size: 2rem;
   margin-left: 16px;
+}
+
+.rdf__portfolio {
+  padding: 96px 0 64px;
+}
+.rdf__portfolio fieldset {
+  border-top: 1px solid #333333;
+}
+.rdf__portfolio fieldset legend {
+  margin-top: -55px;
+  width: 290px;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: right;
+}
+.rdf__portfolio-descrition {
+  margin-top: 45px;
+}
+.rdf__portfolio-descrition .list-group-item {
+  padding: 0;
+}
+
+footer {
+  display: block;
+  padding-top: 120px;
+}
+footer .rdf__footer .rdf__logo {
+  width: 165px;
+  height: 165px;
+}
+footer .rdf__footer .rdf__footer-info {
+  margin-bottom: 253px;
 }/*# sourceMappingURL=styles.css.map */

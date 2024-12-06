@@ -9,6 +9,7 @@ body{
     font-weight: map-get($font-weights, light );
     line-height: $line-height-regular;
 }
+
 .navbar>.container-fluid{
     padding: 0;
 }
@@ -22,6 +23,9 @@ body{
         padding: 0 !important;
     }
     
+}
+.rdf__link{
+    @extend .text-highlight-500;
 }
 .rdf__button{
     &-primary{
@@ -172,5 +176,47 @@ body{
         font-family: $primary-font;
         font-size: map-get($font-sizes, biggest);
         margin-left: 16px;
+    }
+}
+.rdf__portfolio{
+
+    padding: 96px 0 64px;
+
+    fieldset{
+        border-top: 1px solid $neutral-100;
+
+
+        legend{
+            margin-top: -55px;
+            @extend .bg-background-100;
+            width: 290px;
+            font-size: 2*map-get($font-sizes, biggest);
+            font-weight: map-get($font-weights, bold);
+            text-align: right;
+        }
+    }
+
+    &-descrition{
+        margin-top: 45px;
+
+        .list-group-item{
+            padding: 0;;
+        }
+    }
+}
+footer{
+    @extend .bg-primary-100;
+    display: block;
+    padding-top: 120px;
+
+    .rdf__footer{
+        .rdf__logo{
+            width: 165px;
+            height: 165px;
+        }
+
+        .rdf__footer-info{
+            margin-bottom: 253px;
+        }
     }
 }
