@@ -1,0 +1,22 @@
+
+
+/* Tipos */
+.btn.cancel {
+  background-color: #ccc;
+  color: #000;
+}
+
+.btn.save {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btn.delete {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.btn.link {
+  background-color: #2196f3;
+  color: #fff;
+}/*# sourceMappingURL=button.component.css.map */

@@ -1,0 +1,14 @@
+<a
+    *ngIf="link; else buttonTemplate"
+    [routerLink] = "link"
+    [ngClass]="['btn', type]"
+>
+<i *ngIf="icon" class="{{ icon }}"></i>
+{{ label }}
+</a>
+<ng-template #buttonTemplate>
+    <button [ngClass]="['btn', type]" (click)="onClick()">
+        <i *ngIf="icon" class="{{ icon }}"></i>
+        {{ label }}
+    </button>
+</ng-template>
