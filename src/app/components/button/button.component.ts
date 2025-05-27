@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 export class ButtonComponent {
 
   @Input() label: string = 'Enviar';
-  @Input() type: 'cancel' | 'save' | 'delete' | 'custom' = 'custom';
+  @Input() type: 'cancel' | 'rdf__button-primary' | 'delete' | 'custom' = 'custom';
   @Input() icon?: string;
   @Input() link?: string;
   @Input() action = new EventEmitter<void>();

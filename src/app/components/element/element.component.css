@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* You can add global styles to this file, and also import other style files */
 .roboto-thin {
   font-family: "Roboto", system-ui;
   font-weight: 100;
@@ -72,7 +70,7 @@
   font-style: italic;
 }
 
-.bg-primary-100, footer, .rdf__info p, .rdf__info, .rdf__button-secondary, .navbar {
+.bg-primary-100 {
   background-color: #001133;
 }
 
@@ -104,7 +102,7 @@
   color: #001A3A;
 }
 
-.bg-primary-200-hover:hover, .rdf__button-secondary:hover {
+.bg-primary-200-hover:hover {
   background-color: #001A3A;
 }
 
@@ -136,7 +134,7 @@
   color: #002266;
 }
 
-.bg-primary-300-focus:focus, .rdf__button-secondary:focus {
+.bg-primary-300-focus:focus {
   background-color: #002266;
 }
 
@@ -192,7 +190,7 @@
   color: #00061F;
 }
 
-.bg-accent-100, .rdf__line, .rdf__button-primary {
+.bg-accent-100 {
   background-color: #FF4433;
 }
 
@@ -224,7 +222,7 @@
   color: #FF6655;
 }
 
-.bg-accent-200-hover:hover, .rdf__button-primary:hover {
+.bg-accent-200-hover:hover {
   background-color: #FF6655;
 }
 
@@ -256,7 +254,7 @@
   color: #FF8877;
 }
 
-.bg-accent-300-focus:focus, .rdf__button-danger:focus, .rdf__button-primary:focus {
+.bg-accent-300-focus:focus {
   background-color: #FF8877;
 }
 
@@ -272,7 +270,7 @@
   color: #CC3729;
 }
 
-.bg-accent-400-hover:hover, .rdf__button-danger:hover {
+.bg-accent-400-hover:hover {
   background-color: #CC3729;
 }
 
@@ -288,7 +286,7 @@
   color: #CC3729;
 }
 
-.bg-accent-500, .rdf__button-danger {
+.bg-accent-500 {
   background-color: #993026;
 }
 
@@ -312,7 +310,7 @@
   color: #993026;
 }
 
-.bg-highlight-100, .rdf__element:hover, .rdf__element.rdf__element-logo {
+.bg-highlight-100 {
   background-color: #FFDD00;
 }
 
@@ -412,7 +410,7 @@
   background-color: #998900;
 }
 
-.text-highlight-500, .rdf__link {
+.text-highlight-500 {
   color: #998900;
 }
 
@@ -432,11 +430,11 @@
   color: #998900;
 }
 
-.bg-background-100, .rdf__portfolio fieldset legend, .rdf__services fieldset legend, .rdf__element {
+.bg-background-100 {
   background-color: #FFFFFF;
 }
 
-.text-background-100, .rdf__banner-text p, .rdf__info p, .rdf__button-danger, .rdf__button-secondary, .rdf__button-primary {
+.text-background-100 {
   color: #FFFFFF;
 }
 
@@ -504,11 +502,11 @@
   color: #E6E6E6;
 }
 
-.bg-neutral-100, .rdf__about .rdf__line {
+.bg-neutral-100 {
   background-color: #333333;
 }
 
-.text-neutral-100, .rdf__element {
+.text-neutral-100 {
   color: #333333;
 }
 
@@ -552,214 +550,18 @@
   color: #4D4D4D;
 }
 
-body {
-  font-family: "Roboto", system-ui;
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-.navbar > .container-fluid {
-  padding: 0;
-}
-
-.navbar {
-  padding: 0;
-}
-.navbar .navbar-brand,
-.navbar .nav-item,
-.navbar .nav-link {
-  padding: 0 !important;
-}
-
-.h2 {
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-.rdf__button-primary {
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.375rem;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.rdf__button-secondary {
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.375rem;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.rdf__button-danger {
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.375rem;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.rdf__element {
-  display: flex;
-  width: 155px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+.rdf__QElement {
+  width: 100px;
+  height: 100px;
   padding: 8px;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-top: 1px solid #333333;
+  font-size: 0.75rem;
+  border: 1px solid #333;
 }
-.rdf__element-number {
-  font-size: 1rem;
+.rdf__QElement p {
   margin: 0;
 }
-.rdf__element-symbol {
-  font-size: 4rem;
-  margin: 0;
-  font-weight: 500;
-}
-.rdf__element-name {
+.rdf__QElement-name {
+  font-weight: 700;
+  text-transform: uppercase;
   font-size: 1rem;
-  margin: 0;
-}
-.rdf__line {
-  height: 12px;
-  margin-bottom: 32px;
-}
-
-.rdf__direita {
-  margin-left: 40px;
-}
-
-.rdf__title {
-  padding: 64px 0;
-}
-.rdf__title ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.rdf__info {
-  padding: 64px 0;
-}
-.rdf__info p {
-  font-family: "Roboto", system-ui;
-  font-size: 1rem;
-}
-.rdf__info .rdf__button-primary {
-  margin-top: 64px;
-}
-
-.rdf__banner {
-  position: relative;
-  width: 100%;
-  max-height: 500px;
-  overflow: hidden;
-}
-.rdf__banner-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.rdf__banner-text {
-  position: absolute;
-  top: 64px;
-  left: 0;
-}
-.rdf__banner-text p {
-  font-size: 64px;
-  font-family: "Roboto", system-ui;
-  line-height: 0.75;
-  font-weight: 700;
-}
-.rdf__banner-text.container {
-  width: 90%; /* Ajuste de acordo com o quanto você quer que o texto ocupe */
-  max-width: 1200px; /* Limite de largura */
-  margin-left: 15%; /* Centraliza o container horizontalmente */
-}
-.rdf__banner-text .rdf__button-primary {
-  margin-top: 64px;
-}
-
-.rdf__services {
-  padding: 96px 0 64px;
-}
-.rdf__services fieldset {
-  border-top: 1px solid #333333;
-}
-.rdf__services fieldset legend {
-  margin-top: -55px;
-  width: 290px;
-  font-size: 4rem;
-  font-weight: 700;
-}
-.rdf__services-list {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 96px;
-}
-.rdf__services-list li {
-  height: 64px;
-  margin-bottom: 32px;
-}
-.rdf__services-list img {
-  width: 64px;
-  height: 64px;
-}
-.rdf__services-text {
-  font-family: "Roboto", system-ui;
-  font-size: 2rem;
-  margin-left: 16px;
-}
-
-.rdf__portfolio {
-  padding: 96px 0 64px;
-}
-.rdf__portfolio fieldset {
-  border-top: 1px solid #333333;
-}
-.rdf__portfolio fieldset legend {
-  margin-top: -55px;
-  width: 290px;
-  font-size: 4rem;
-  font-weight: 700;
-  text-align: right;
-}
-.rdf__portfolio-descrition {
-  margin-top: 45px;
-}
-.rdf__portfolio-descrition .list-group-item {
-  padding: 0;
-}
-
-.rdf__about {
-  margin-top: 120px;
-}
-.rdf__about .rdf__direita {
-  margin-bottom: 64px;
-}
-.rdf__about .rdf__line {
-  height: 4px;
-}
-
-.rdf__qualificacoes {
-  margin: 64px 0;
-}
-
-footer {
-  display: block;
-  padding-top: 120px;
-}
-footer .rdf__footer .rdf__logo {
-  width: 165px;
-  height: 165px;
-}
-footer .rdf__footer .rdf__footer-info {
-  margin-bottom: 253px;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=element.component.css.map */
