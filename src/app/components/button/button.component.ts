@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,16 +10,32 @@ import { RouterLink } from '@angular/router';
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-
   @Input() label: string = 'Enviar';
-  @Input() type: 'cancel' | 'rdf__button-primary' | 'delete' | 'custom' = 'custom';
+  @Input() variant: 'primary' | 'accent' | 'highlight' | 'cancel' | 'delete' | 'custom' = 'custom';
+  @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() icon?: string;
   @Input() link?: string;
-  @Input() action = new EventEmitter<void>();
+  @Output() action = new EventEmitter<void>();
 
-  onClick(){
+  get buttonClass(): string[] {
+    const classes = ['btn'];
+    
+    // Variantes do design system
+    if (this.variant !== 'custom') {
+      classes.push(`rdf__button-${this.variant}-${this.size}`);
+    }
+
+    // Se quiser tratar "cancel" e "delete" como tipos visuais específicos
+    if (this.variant === 'cancel') {
+      classes.push('btn-cancel'); // defina isso no seu SCSS
+    } else if (this.variant === 'delete') {
+      classes.push('btn-delete');
+    }
+
+    return classes;
+  }
+
+  onClick() {
     this.action.emit();
   }
-  
-  
 }

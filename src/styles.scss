@@ -25,43 +25,34 @@ body{
     
 }
 .h2{
-    font-size: 2*map-get($font-sizes, biggest);
+    
     font-weight: map-get($font-weights, bold );
 }
 .rdf__link{
     @extend .text-highlight-500;
 }
-@include button-variant('primary', accent, 100, 200, 300);
-@include button-variant('secondary', primary, 100, 200, 300);
-@include button-variant('danger', accent, 500, 400, 300);
+@include button-variant('primary', 'accent', 100, 200, 300, medium);
+@include button-variant('secondary', 'primary', 100, 200, 300, medium);
+@include button-variant('danger', 'accent', 500, 400, 300, medium);
 
 //Elemento da tabela periodica
 .rdf__element{
-    display: flex;
-    width: 155px;
-    flex-direction: column;
+    width: 100px;
+    height: 100px;
     @extend .bg-background-100;
     @extend .text-neutral-100;
-    align-items: center;
-    justify-content: space-between;
+
     padding: 8px;
     border-right: 1px solid $neutral-100;
     border-bottom: 1px solid $neutral-100;
     border-top: 1px solid $neutral-100;
 
-    &-number{
-        font-size: map-get($font-sizes, regular);
-        margin: 0;
-    }
-    &-symbol{
-        font-size: 2*map-get($font-sizes, biggest);
-        margin: 0;
-        font-weight: map-get($font-weights, medium);
-    }
+    &-number,
+    &-symbol,
     &-name{
-        font-size: map-get($font-sizes, regular);
         margin: 0;
     }
+    
     &.rdf__element-logo{
         @extend .bg-highlight-100;
     }
@@ -152,8 +143,6 @@ body{
             margin-top: -55px;
             @extend .bg-background-100;
             width: 290px;
-            font-size: 2*map-get($font-sizes, biggest);
-            font-weight: map-get($font-weights, bold);
         }
     }
 
@@ -192,8 +181,6 @@ body{
             margin-top: -55px;
             @extend .bg-background-100;
             width: 290px;
-            font-size: 2*map-get($font-sizes, biggest);
-            font-weight: map-get($font-weights, bold);
             text-align: right;
         }
     }

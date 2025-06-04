@@ -1,14 +1,18 @@
 <a
-    *ngIf="link; else buttonTemplate"
-    [routerLink] = "link"
-    [ngClass]="['btn', type]"
+  *ngIf="link; else buttonTemplate"
+  [routerLink]="link"
+  [ngClass]="buttonClass"
 >
-<i *ngIf="icon" class="{{ icon }}"></i>
-{{ label }}
+  <i *ngIf="icon" class="{{ icon }}"></i>
+  {{ label }}
 </a>
+
 <ng-template #buttonTemplate>
-    <button [ngClass]="['btn', type]" (click)="onClick()">
-        <i *ngIf="icon" class="{{ icon }}"></i>
-        {{ label }}
-    </button>
+  <button
+    [ngClass]="buttonClass"
+    (click)="onClick()"
+  >
+    <i *ngIf="icon" class="{{ icon }}"></i>
+    {{ label }}
+  </button>
 </ng-template>
