@@ -826,6 +826,16 @@ body {
   margin: 64px 0;
 }
 
+.rdf__services .rdf__QElement-name {
+  font-size: 2rem !important;
+}
+.rdf__services .p__margin-left-medium {
+  margin-left: 42px;
+}
+.rdf__services .accordion {
+  margin-top: 80px;
+}
+
 footer {
   display: block;
   padding-top: 120px;
