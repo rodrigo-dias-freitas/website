@@ -1,39 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "../public/assets/variables";
 @import "../public/assets/mixins";
-
-
-  
-body{
-    font-family: $primary-font;
-    font-weight: map-get($font-weights, light );
-    line-height: $line-height-regular;
-}
-
-.navbar>.container-fluid{
-    padding: 0;
-}
-.navbar{
-    @extend .bg-primary-100;
-    padding: 0;
-
-    .navbar-brand,
-    .nav-item,
-    .nav-link{
-        padding: 0 !important;
-    }
-    
-}
-.h2{
-    
-    font-weight: map-get($font-weights, bold );
-}
-.rdf__link{
-    @extend .text-highlight-500;
-}
-@include button-variant('primary', 'accent', 100, 200, 300, medium);
-@include button-variant('secondary', 'primary', 100, 200, 300, medium);
-@include button-variant('danger', 'accent', 500, 400, 300, medium);
 
 //Elemento da tabela periodica
 .rdf__element{
@@ -43,10 +13,8 @@ body{
     @extend .text-neutral-100;
 
     padding: 8px;
-    border-right: 1px solid $neutral-100;
-    border-bottom: 1px solid $neutral-100;
-    border-top: 1px solid $neutral-100;
-
+    border: 1px solid $neutral-100;
+    
     &-number,
     &-symbol,
     &-name{
@@ -61,17 +29,6 @@ body{
         @extend .bg-highlight-100;
     }
 }
-
-.rdf__line{
-    height: 12px;
-    @extend .bg-accent-100;
-    margin-bottom: 32px;
-}
-
-.rdf__direita{
-    margin-left: 40px;
-}
-
 .rdf__title{
     padding: 64px 0;
 
@@ -80,21 +37,10 @@ body{
         padding-left: 0;
     }
 }
-.rdf__info{
+.navbar{
     @extend .bg-primary-100;
-    padding: 64px 0;
-
-    p{
-        @extend .bg-primary-100;
-        @extend .text-background-100;
-        font-family: $primary-font;
-        font-size: map-get($font-sizes, regular)
-    }
-
-    .rdf__button-primary{
-        margin-top: 64px;
-    }
 }
+
 .rdf__banner{
     position: relative;
     width: 100%;
@@ -132,108 +78,4 @@ body{
         }
     }
 }
-.rdf__services{
 
-    padding: 96px 0 64px;
-
-    fieldset{
-        border-top: 1px solid $neutral-100;
-
-        legend{
-            margin-top: -55px;
-            @extend .bg-background-100;
-            width: 290px;
-        }
-    }
-
-    &-list{
-        list-style: none;
-        margin-left: 0;
-        padding-left: 0;
-        margin-top: 96px;
-
-        li{
-            height: 64px;
-            margin-bottom: 32px;
-        }
-
-        img{
-            width: 64px;
-            height: 64px;
-        }
-    }
-
-    &-text{
-        font-family: $primary-font;
-        font-size: map-get($font-sizes, biggest);
-        margin-left: 16px;
-    }
-}
-.rdf__portfolio{
-
-    padding: 96px 0 64px;
-
-    fieldset{
-        border-top: 1px solid $neutral-100;
-
-
-        legend{
-            margin-top: -55px;
-            @extend .bg-background-100;
-            width: 290px;
-            text-align: right;
-        }
-    }
-
-    &-descrition{
-        margin-top: 45px;
-
-        .list-group-item{
-            padding: 0;;
-        }
-    }
-}
-.rdf__about{
-    margin-top: 120px;
-
-    .rdf__direita{
-        margin-bottom: 64px;
-    }
-
-    .rdf__line{
-        @extend .bg-neutral-100;
-        height: 4px;
-    }
-}
-.rdf__qualificacoes{
-    margin: 64px 0;
-}
-.rdf__services{
-    .rdf__QElement-name{
-        font-size: map-get($font-sizes, headline-large ) !important;
-    }
-
-    .p__margin-left-medium{
-        margin-left: 42px;
-    }
-
-    .accordion{
-        margin-top: 80px;
-    }
-} 
-footer{
-    @extend .bg-primary-100;
-    display: block;
-    padding-top: 120px;
-
-    .rdf__footer{
-        .rdf__logo{
-            width: 165px;
-            height: 165px;
-        }
-
-        .rdf__footer-info{
-            margin-bottom: 253px;
-        }
-    }
-}

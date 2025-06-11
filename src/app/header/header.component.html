@@ -1,67 +1,37 @@
 <header>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid d-flex">
-        <a class="navbar-brand" routerLink="/" routerLinkActive="active-link"  href="/">
-          <div class="rdf__element d-flex flex-column justify-content-between rdf__element-logo">
-            <p class="rdf__element-number body-small">76</p>
-            <p class="rdf__element-symbol align-self-center headline-medium text-uppercase">Fr</p>
-            <p class="rdf__element-name align-self-center text-center body-small">Freitas</p>
-          </div>
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" routerLink='sobre-mim' routerLinkActive="active-link"  href="/sobre-mim">
-                <div class="rdf__element d-flex flex-column justify-content-between">
-                  <p class="rdf__element-number body-small">01</p>
-                  <p class="rdf__element-symbol align-self-center headline-medium text-uppercase">Sm</p>
-                  <p class="rdf__element-name body-small align-self-center text-center">Sobre mim</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink='services' routerLinkActive="active-link"  href="/services">
-                <div class="rdf__element d-flex flex-column justify-content-between">
-                  <p class="rdf__element-number body-small">02</p>
-                  <p class="rdf__element-symbol align-self-center headline-medium text-uppercase">S</p>
-                  <p class="rdf__element-name body-small align-self-center text-center">Serviços</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <div class="rdf__element d-flex flex-column justify-content-between">
-                  <p class="rdf__element-number body-small">03</p>
-                  <p class="rdf__element-symbol align-self-center headline-medium text-uppercase">Pf</p>
-                  <p class="rdf__element-name body-small align-self-center text-center">Portfolio</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <div class="rdf__element d-flex flex-column justify-content-between">
-                  <p class="rdf__element-number body-small">04</p>
-                  <p class="rdf__element-symbol align-self-center headline-medium text-uppercase">B</p>
-                  <p class="rdf__element-name body-small align-self-center text-center">Blog</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <div class="rdf__element d-flex flex-column justify-content-between">
-                  <p class="rdf__element-number body-small">05</p>
-                  <p class="rdf__element-symbol align-self-center headline-medium text-uppercase">Ct</p>
-                  <p class="rdf__element-name body-small align-self-center text-center">Contato</p>
-                </div>
-              </a>
-            </li>
-          </ul>
+  <nav class="bg-white w-full shadow-md">
+    <div class="w-full flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a routerLink="/" routerLinkActive="active-link" class="flex flex-col justify-between items-start">
+        <div class="rdf__element flex flex-col justify-between rdf__element-logo">
+          <p class="rdf__element-number text-sm">76</p>
+          <p class="rdf__element-symbol text-xl uppercase self-center">Fr</p>
+          <p class="rdf__element-name text-sm text-center self-center">Freitas</p>
         </div>
+      </a>
+
+      <!-- BOTÃO MOBILE -->
+      <button class="block lg:hidden text-gray-800 focus:outline-none" (click)="menuOpen = !menuOpen" aria-label="Abrir menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="w-full lg:flex lg:items-center lg:justify-end" [ngClass]="{ 'hidden': !menuOpen, 'flex': menuOpen }">
+        <ul class="flex flex-col lg:flex-row">
+          <li *ngFor="let item of navItems" class="text-center">
+            <a [routerLink]="item.link" routerLinkActive="active-link" class="block">
+              <div class="rdf__element flex flex-col justify-between items-center">
+                <p class="rdf__element-number text-xs text-neutral-100">{{ item.number }}</p>
+                <p class="rdf__element-symbol text-lg uppercase text-center text-primary-100">{{ item.symbol }}</p>
+                <p class="rdf__element-name text-xs text-center text-neutral-200">{{ item.label }}</p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
-  
+    </div>
+    
+  </nav>
+</header>
