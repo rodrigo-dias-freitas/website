@@ -122,7 +122,7 @@
   line-height: 1rem;
 }
 
-.bg-primary-100, .navbar, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
+.bg-primary-100, .rdf__info, .navbar, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
   background-color: #001133;
 }
 
@@ -306,7 +306,7 @@
   background-color: #FFFFFF;
 }
 
-.text-background-100, .rdf__banner-text p, .rdf__button-neutral-large, .rdf__button-neutral-medium, .rdf__button-neutral-small, .rdf__button-background-large, .rdf__button-background-medium, .rdf__button-background-small, .rdf__button-highlight-large, .rdf__button-highlight-medium, .rdf__button-highlight-small, .rdf__button-accent-large, .rdf__button-accent-medium, .rdf__button-accent-small, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
+.text-background-100, .rdf__info p, .rdf__banner-text p, .rdf__button-neutral-large, .rdf__button-neutral-medium, .rdf__button-neutral-small, .rdf__button-background-large, .rdf__button-background-medium, .rdf__button-background-small, .rdf__button-highlight-large, .rdf__button-highlight-medium, .rdf__button-highlight-small, .rdf__button-accent-large, .rdf__button-accent-medium, .rdf__button-accent-small, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
   color: #FFFFFF;
 }
 
@@ -670,4 +670,8 @@
 }
 .rdf__banner-text .rdf__button-primary {
   margin-top: 64px;
+}
+
+.rdf__info {
+  padding: 64px 0;
 }/*# sourceMappingURL=styles.css.map */

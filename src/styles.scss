@@ -79,3 +79,13 @@
     }
 }
 
+.rdf__info{
+    @extend .bg-primary-100;
+    padding: 64px 0;
+
+    p{
+        
+        @extend .text-background-100;
+    }
+}
+

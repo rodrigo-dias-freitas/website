@@ -20,12 +20,12 @@
 
       <div class="w-full lg:flex lg:items-center lg:justify-end" [ngClass]="{ 'hidden': !menuOpen, 'flex': menuOpen }">
         <ul class="flex flex-col lg:flex-row">
-          <li *ngFor="let item of navItems" class="text-center">
+          <li *ngFor="let item of navItems">
             <a [routerLink]="item.link" routerLinkActive="active-link" class="block">
-              <div class="rdf__element flex flex-col justify-between items-center">
-                <p class="rdf__element-number text-xs text-neutral-100">{{ item.number }}</p>
-                <p class="rdf__element-symbol text-lg uppercase text-center text-primary-100">{{ item.symbol }}</p>
-                <p class="rdf__element-name text-xs text-center text-neutral-200">{{ item.label }}</p>
+              <div class="rdf__element flex flex-col justify-between">
+                <p class="rdf__element-number text-sm text-neutral-100">{{ item.number }}</p>
+                <p class="rdf__element-symbol text-xl uppercase text-center text-primary-100 self-center">{{ item.symbol }}</p>
+                <p class="rdf__element-name text-sm text-center text-neutral-200 self-center">{{ item.label }}</p>
               </div>
             </a>
           </li>
