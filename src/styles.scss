@@ -89,3 +89,79 @@
     }
 }
 
+.rdf__services{
+
+    padding: 96px 0 64px;
+
+    fieldset{
+        border-top: 1px solid $neutral-100;
+
+        legend{
+            margin-top: -40px;
+            @extend .bg-background-100;
+            width: 290px;
+        }
+    }
+
+    &-list{
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 96px;
+
+        li{
+            height: 64px;
+            margin-bottom: 32px;
+        }
+
+        img{
+            width: 64px;
+            height: 64px;
+        }
+    }
+
+    &-text{
+        font-family: $primary-font;
+    }
+}
+.rdf__portfolio{
+
+    padding: 96px 0 64px;
+
+    fieldset{
+        border-top: 1px solid $neutral-100;
+
+
+        legend{
+            margin-top: -55px;
+            @extend .bg-background-100;
+            width: 290px;
+            text-align: right;
+        }
+    }
+
+    &-descrition{
+        margin-top: 45px;
+
+        .list-group-item{
+            padding: 0;;
+        }
+    }
+}
+footer{
+    @extend .bg-primary-100;
+    display: block;
+    padding-top: 120px;
+
+    .rdf__footer{
+        .rdf__logo{
+            width: 165px;
+            height: 165px;
+        }
+
+        .rdf__footer-info{
+            margin-bottom: 253px;
+        }
+    }
+}
+

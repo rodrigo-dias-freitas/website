@@ -122,7 +122,7 @@
   line-height: 1rem;
 }
 
-.bg-primary-100, .rdf__info, .navbar, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
+.bg-primary-100, footer, .rdf__info, .navbar, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
   background-color: #001133;
 }
 
@@ -302,7 +302,7 @@
   border-color: #998900;
 }
 
-.bg-background-100, .rdf__element, .rdf__button-background-large, .rdf__button-background-medium, .rdf__button-background-small {
+.bg-background-100, .rdf__portfolio fieldset legend, .rdf__services fieldset legend, .rdf__element, .rdf__button-background-large, .rdf__button-background-medium, .rdf__button-background-small {
   background-color: #FFFFFF;
 }
 
@@ -674,4 +674,61 @@
 
 .rdf__info {
   padding: 64px 0;
+}
+.rdf__services {
+  padding: 96px 0 64px;
+}
+.rdf__services fieldset {
+  border-top: 1px solid #333333;
+}
+.rdf__services fieldset legend {
+  margin-top: -40px;
+  width: 290px;
+}
+.rdf__services-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 96px;
+}
+.rdf__services-list li {
+  height: 64px;
+  margin-bottom: 32px;
+}
+.rdf__services-list img {
+  width: 64px;
+  height: 64px;
+}
+.rdf__services-text {
+  font-family: "Roboto", sans-serif;
+}
+
+.rdf__portfolio {
+  padding: 96px 0 64px;
+}
+.rdf__portfolio fieldset {
+  border-top: 1px solid #333333;
+}
+.rdf__portfolio fieldset legend {
+  margin-top: -55px;
+  width: 290px;
+  text-align: right;
+}
+.rdf__portfolio-descrition {
+  margin-top: 45px;
+}
+.rdf__portfolio-descrition .list-group-item {
+  padding: 0;
+}
+
+footer {
+  display: block;
+  padding-top: 120px;
+}
+footer .rdf__footer .rdf__logo {
+  width: 165px;
+  height: 165px;
+}
+footer .rdf__footer .rdf__footer-info {
+  margin-bottom: 253px;
 }/*# sourceMappingURL=styles.css.map */
