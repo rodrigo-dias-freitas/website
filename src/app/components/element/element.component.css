@@ -621,9 +621,6 @@
 }
 
 .rdf__QElement {
-  width: 100px;
-  height: 100px;
-  padding: 8px;
   border: 1px solid #333;
 }
 .rdf__QElement p {

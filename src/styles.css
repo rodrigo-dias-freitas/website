@@ -338,7 +338,7 @@
   border-color: #E6E6E6;
 }
 
-.bg-neutral-100, .rdf__button-neutral-large, .rdf__button-neutral-medium, .rdf__button-neutral-small {
+.bg-neutral-100, .rdf__about .rdf__line, .rdf__button-neutral-large, .rdf__button-neutral-medium, .rdf__button-neutral-small {
   background-color: #333333;
 }
 
@@ -658,7 +658,6 @@
   left: 0;
 }
 .rdf__banner-text p {
-  font-size: 64px;
   font-family: "Roboto", sans-serif;
   line-height: 0.75;
   font-weight: 700;
@@ -684,20 +683,6 @@
 .rdf__services fieldset legend {
   margin-top: -40px;
   width: 290px;
-}
-.rdf__services-list {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 96px;
-}
-.rdf__services-list li {
-  height: 64px;
-  margin-bottom: 32px;
-}
-.rdf__services-list img {
-  width: 64px;
-  height: 64px;
 }
 .rdf__services-text {
   font-family: "Roboto", sans-serif;

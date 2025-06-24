@@ -60,7 +60,6 @@
         
 
         p{
-            font-size: 64px;
             font-family: $primary-font;
             line-height: 0.75;
             font-weight: map-get($font-weights, bold);
@@ -103,23 +102,6 @@
         }
     }
 
-    &-list{
-        list-style: none;
-        margin-left: 0;
-        padding-left: 0;
-        margin-top: 96px;
-
-        li{
-            height: 64px;
-            margin-bottom: 32px;
-        }
-
-        img{
-            width: 64px;
-            height: 64px;
-        }
-    }
-
     &-text{
         font-family: $primary-font;
     }
@@ -146,6 +128,12 @@
         .list-group-item{
             padding: 0;;
         }
+    }
+}
+.rdf__about{
+
+    .rdf__line{
+        @extend .bg-neutral-100;
     }
 }
 footer{
