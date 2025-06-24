@@ -1,39 +1,29 @@
-<div class="container rdf__services">
-    <div class="d-flex flex-row">
+<div class="container rdf__service py-16">
+    <div class="d-flex flex-row mb-32">
         <app-element
         extraClass = "bg-highlight-100 text-neutral-100"
         name = "S"
         number = "02"
         description = "Serviços"></app-element>
 
-        <p class="p__margin-left-medium">A seguir, conheça os detalhes dos serviços que ofereço para atender suas necessidades</p>
+        <p class="ml-10 font-normal text-2xl">A seguir, conheça os detalhes dos serviços que ofereço para atender suas necessidades</p>
     </div>
 
-    <div class="accordion accordion-flush">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Consultoria Financeira Familiar e Pessoal
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <p>Nossa consultoria em planejamento financeiro pessoal e familiar oferece um diagnóstico financeiro personalizado, planejamento de investimentos, controle de despesas, educação financeira e suporte contínuo, tudo com o objetivo de alcançar a tranquilidade financeira e um futuro próspero. Com formação sólida em Gestão Financeira, um MBA em Planejamento Financeiro e vasta experiência no mercado, proporcionamos soluções personalizadas que realmente fazem a diferença. Transforma seu futuro financeiro hoje.</p>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                    Consultoria Financeira Familiar e Pessoal
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <p>Nossa consultoria em planejamento financeiro pessoal e familiar oferece um diagnóstico financeiro personalizado, planejamento de investimentos, controle de despesas, educação financeira e suporte contínuo, tudo com o objetivo de alcançar a tranquilidade financeira e um futuro próspero. Com formação sólida em Gestão Financeira, um MBA em Planejamento Financeiro e vasta experiência no mercado, proporcionamos soluções personalizadas que realmente fazem a diferença. Transforma seu futuro financeiro hoje.</p>
-                </div>
-            </div>
+    <div class="w-full space-y-2">
+        <div *ngFor="let section of sections; let i = index" class="border rounded-lg bg-accent-300 text-background-100">
+            <button (click)="toggleSection(i)" class="w-full flex justify-between items-center p-4 font-medium text-left text-background-100 bg-accent-200 hover:bg-accent-100 text-2xl">
+                <span>{{ section.title }}</span>
+                    <svg 
+                        class="w-5 h-5 transform transition-transform duration-300" 
+                        [ngClass]="{'rotate-180': section.open}"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+            </button>
+            <div class="px-4 py-2 transition-all duration-300 ease-in-out text-base my-8 mx-10" *ngIf="section.open"> {{ section.content }} </div>
         </div>
     </div>
+    
     
 </div>

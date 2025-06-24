@@ -716,4 +716,14 @@ footer .rdf__footer .rdf__logo {
 }
 footer .rdf__footer .rdf__footer-info {
   margin-bottom: 253px;
+}
+
+.rdf__service .rdf__QElement-name {
+  font-size: 2rem !important;
+}
+.rdf__service .p__margin-left-medium {
+  margin-left: 42px;
+}
+.rdf__service .accordion {
+  margin-top: 80px;
 }/*# sourceMappingURL=styles.css.map */

@@ -153,3 +153,16 @@ footer{
     }
 }
 
+.rdf__service{
+    .rdf__QElement-name{
+        font-size: map-get($font-sizes, headline-large ) !important;
+    }
+
+    .p__margin-left-medium{
+        margin-left: 42px;
+    }
+
+    .accordion{
+        margin-top: 80px;
+    }
+} 
