@@ -165,4 +165,9 @@ footer{
     .accordion{
         margin-top: 80px;
     }
+}
+.rdf__contact{
+    .rdf__QElement-name{
+        font-size: map-get($font-sizes, headline-large ) !important;
+    }
 } 

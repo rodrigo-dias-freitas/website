@@ -18,7 +18,7 @@ export class HeaderComponent {
     { number: '02', symbol: 'S', label: 'Serviços', link: '/services' },
     { number: '03', symbol: 'Pf', label: 'Portfolio', link: '#' },
     { number: '04', symbol: 'B', label: 'Blog', link: '#' },
-    { number: '05', symbol: 'Ct', label: 'Contato', link: '#' },
+    { number: '05', symbol: 'Ct', label: 'Contato', link: '/contato' },
   ];
 
   toggleMenu() {

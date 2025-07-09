@@ -726,4 +726,8 @@ footer .rdf__footer .rdf__footer-info {
 }
 .rdf__service .accordion {
   margin-top: 80px;
+}
+
+.rdf__contact .rdf__QElement-name {
+  font-size: 2rem !important;
 }/*# sourceMappingURL=styles.css.map */
