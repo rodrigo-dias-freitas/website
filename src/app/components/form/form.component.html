@@ -1,19 +1,19 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <p>
+    <p class="mb-4">
         <label>Nome</label>
-        <input id="name" type="text" formControlName="name" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 border-neutral-100 border">
+        <input id="name" type="text" formControlName="name" class="block w-full min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 border-neutral-100 border">
     </p>
-    <p>
+    <p class="mb-4">
         <label>E-mail</label>
-        <input id="email" type="email" formControlName="email" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 border-neutral-100 border">
+        <input id="email" type="email" formControlName="email" class="block w-full min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 border-neutral-100 border">
     </p>
-    <p>
+    <p class="mb-4">
         <label>Assunto</label>
-        <input id="subject" type="text" formControlName="subject" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 border-neutral-100 border">
+        <input id="subject" type="text" formControlName="subject" class="block w-full min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 border-neutral-100 border">
     </p>
-    <p>
+    <p class="mb-4">
         <label>Mensagem</label>
-        <textarea id="message" formControlName="message"></textarea>
+        <textarea id="message" formControlName="message" class="block w-full h-[200px] min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 border-neutral-100 border"></textarea>
     </p>
 
     <button type="submit" [disabled]="!contactForm.valid" class="btn rdf__button-accent-medium">Enviar</button>
