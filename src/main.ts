@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 import { ServicesComponent } from './app/pages/services/services.component';
 import { AboutMeComponent } from './app/pages/about-me/about-me.component';
 import { ContactComponent } from './app/pages/contact/contact.component';
+import { provideHttpClient } from '@angular/common/http';
 
 const routes = [
   { path: '', loadComponent: () => import ('./app/pages/home/home.component').then(m => HomeComponent)  }, // Rota inicial
@@ -17,6 +18,7 @@ const routes = [
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes)
+    provideRouter(routes),
+    provideHttpClient()
   ]
 }).catch(err => console.error(err));

@@ -3,19 +3,8 @@
         <div class="col-2">
             <img src="../../../assets/images/Rectangle.png" class="size-[200px]">
         </div>
-        <div class="col-10 body-large text-neutral-100 mb-16">
-            <p class="mb-2">Bem-vindo(a) ao meu site!</p>
-
-            <p class="mb-2">Olá, meu nome é Rodrigo e sou um planejador financeiro, designer de UI e desenvolvedor web apaixonado por ajudar pessoas e empresas a alcançarem seus objetivos. Minha jornada na tecnologia começou aos 17 anos, quando decidi cursar faculdade de tecnologia. Desde então, minha paixão por essa área só cresceu.</p>    
-                
-            <p class="mb-2">Iniciei minha carreira em suporte a software, mas em 2001, decidi migrar para a área de desenvolvimento, onde encontrei meu verdadeiro interesse. Em 2005, fiz uma pós-graduação em design de interfaces e percebi que a área de Frontend é onde realmente quero trabalhar.</p>    
-                
-            <p class="mb-2">Em 2020, desenvolvi um profundo interesse por finanças, inspirado pela necessidade de entender melhor como gerenciar meus próprios recursos e ajudar outras pessoas a fazerem o mesmo. Comecei minha formação em Gestão Financeira e, logo após, ingressei no MBA em Planejamento Financeiro Pessoal e Familiar, finalizado este ano (2024).</p>    
-                
-            <p class="mb-2">Minha motivação principal é combinar minhas habilidades em finanças e tecnologia para oferecer um serviço completo e integrado. Acredito que, ao ajudar meus clientes a alcançarem suas metas financeiras e criar experiências digitais inovadoras, estou contribuindo para seu sucesso e bem-estar.</p>    
-                
-            <p class="mb-2">Sou movido pela paixão de ver meus clientes prosperarem e pela satisfação de criar algo novo e útil. Cada projeto que assumo é uma oportunidade de aprendizado e crescimento, tanto para mim quanto para aqueles que confiam em meu trabalho.</p>
-        </div>
+        <div *ngIf="postSobreMim" class="col-10 body-large text-neutral-100 mb-16" [innerHTML]="postSobreMim.content.rendered"></div>
+        
     </div>
     <div class="rdf__line col-6 flex flex-row justify-content-center items-center container h-1 my-16 mx-auto"></div>
     <div class="container mx-auto">
@@ -36,166 +25,31 @@
             </li>
         </ul>
         <h2 class="text-neutral-100 text-4xl font-semibold">Qualificações</h2>
-        <div class="rdf__qualificacoes flex flex-row justify-content-center my-16">
-            
-            <div class="p-col-6">
-                <div class="flex flex-row">
+        <div class="rdf__qualificacoes flex justify-center my-16">
+
+            <!-- Coluna esquerda -->
+            <div class="flex flex-col justify-end">
+                <div class="flex flex-row" *ngFor="let linha of [1, 2, 3]">
                     <app-element
-                        extraClass="bg-accent-100 text-background-300"
-                        name ="Ui"
-                        number = "72"
-                        description = "User Interface"></app-element>
-                    <app-element
-                        extraClass="bg-accent-100 text-background-300"
-                        name ="Ux"
-                        number = "70"
-                        description = "User Experience"></app-element>
-                </div>
-                <div class="flex flex-row">
-                    <app-element
-                        extraClass = "bg-accent-300 text-background-300"
-                        name = "H"
-                        number = "99"
-                        description = "HTML"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-300 text-background-300"
-                        name = "C"
-                        number = "100"
-                        description = "CSS"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-300 text-background-300"
-                        name = "Js"
-                        number = "69"
-                        description="Javascript"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-300 text-background-300"
-                        name = "Ts"
-                        number = "71"
-                        description="Typescript"></app-element>
-                </div>
-                <div class="flex flex-row">
-                    <app-element
-                        extraClass = "bg-accent-500 text-background-300"
-                        name = "L"
-                        number = "90"
-                        description = "Less"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-500 text-background-300"
-                        name = "S"
-                        number = "91"
-                        description = "Sass"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-500 text-background-300"
-                        name = "P"
-                        number = "65"
-                        description = "PHP"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-500 text-background-300"
-                        name = "Wp"
-                        number = "99"
-                        description = "Wordpress"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-500 text-background-300"
-                        name = "Ng"
-                        number = "93"
-                        description = "Angular"></app-element>
-                    <app-element
-                        extraClass = "bg-accent-500 text-background-300"
-                        name = "Bs"
-                        number = "87"
-                        description = "Bootstrap"></app-element>
+                        *ngFor="let el of elementosPorColuna.esquerda[linha]"
+                        [extraClass]="el.acf?.element_class"
+                        [name]="el.acf?.element_name"
+                        [number]="el.acf?.element_number"
+                        [description]="el.acf?.element_description">
+                    </app-element>
                 </div>
             </div>
-            <div class="flex flex-col justify-content-end p-col-6">
-                <div class="flex flex-row-reverse">
+
+            <!-- Coluna direita -->
+            <div class="flex flex-col justify-end">
+                <div class="flex flex-row-reverse" *ngFor="let linha of [1, 2, 3]">
                     <app-element
-                        extraClass = "bg-neutral-100 text-background-300"
-                        name = "T"
-                        number = "85"
-                        description = "Trade"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-highlight-100"
-                        name = "I"
-                        number = "80"
-                        description = "Investimentos"
-                    ></app-element>
-                </div>
-                <div class="flex flex-row-reverse">
-                    <app-element
-                        extraClass = "bg-primary-100 text-background-300"
-                        name = "IE"
-                        number = "79"
-                        description = "Indicadores econômicos"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-neutral-200 text-background-300"
-                        name = "AT"
-                        number = "86"
-                        description = "Análise técnica"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-neutral-200 text-background-300"
-                        name = "E"
-                        number = "84"
-                        description = "Estratégia de Trade"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-highlight-200 text-neutral-100"
-                        name = "FII"
-                        number = "81"
-                        description = "Fundos de Invest. Imóveis"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-highlight-200 text-neutral-100"
-                        name = "FIA"
-                        number = "82"
-                        description = "Fundos de Invest. Ações"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-highlight-200 text-neutral-100"
-                        name = "AF"
-                        number = "83"
-                        description = "Análise fundamentalista"
-                    ></app-element>
-                </div>
-                <div class="flex flex-row-reverse">
-                    <app-element
-                        extraClass = "bg-primary-300 text-background-300"
-                        name = "IPCA"
-                        number = "78"
-                        description = "Inflação"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-primary-300 text-background-300"
-                        name = "PIB"
-                        number = "77"
-                        description = "Prod. Interno Bruto"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-primary-300 text-background-300"
-                        name = "PNAD"
-                        number = "76"
-                        description = "Tx. de desemprego"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-primary-300 text-background-300"
-                        name = "Selic"
-                        number = "75"
-                        description = "Juros"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-primary-300 text-background-300"
-                        name = "II"
-                        number = "74"
-                        description = "Indicadores internacionais"
-                    ></app-element>
-                    <app-element
-                        extraClass = "bg-primary-300 text-background-300"
-                        name = "IE"
-                        number = "73"
-                        description = "Outros indicadores"
-                    ></app-element>
+                        *ngFor="let el of elementosPorColuna.direita[linha]"
+                        [extraClass]="el.acf?.element_class"
+                        [name]="el.acf?.element_name"
+                        [number]="el.acf?.element_number"
+                        [description]="el.acf?.element_description">
+                    </app-element>
                 </div>
             </div>
         </div>

@@ -13,11 +13,11 @@
     </div>
 </div>
 <div class="rdf__title container mx-auto">
-    <div class="row">
+    <div class="flex flex-row">
         <div class="col-3">
             <img class="img-fluid" src="assets/images/freitas_logo_tp_transparent.png" alt="Logo em forma de tabela periódica com 3 elementos que formam o nome do autor"> 
         </div>
-        <div class="offset-1 col">
+        <div class="offset-1 col ml-16">
             <div class="rdf__line col-2"></div>
             <ul>
                 <li class="display-large">UI Designer</li>
@@ -29,7 +29,8 @@
 </div>
 <div class="rdf__info">
     <div class="container mx-auto flex flex-col">
-        <p class="body-large">Sou um profissional multifacetado com experiência sólida em planejamento financeiro, design de UI e desenvolvimento web. Com uma formação robusta em Gestão Financeira e um MBA em Planejamento Financeiro Pessoal e Familiar, ajudo indivíduos e famílias a alcançarem seus objetivos financeiros por meio de estratégias personalizadas e eficazes. Além disso, possuo habilidades avançadas em design de interfaces, criando experiências de usuário intuitivas e atraentes. Minha expertise em desenvolvimento web me permite transformar conceitos em sites funcionais e esteticamente agradáveis, utilizando as melhores práticas e tecnologias modernas. Essa combinação única de habilidades me capacita a oferecer soluções completas e integradas, atendendo às necessidades de diversos clientes e projetos.</p>
+        
+        <div *ngIf="resumoSobreMim" class="text-base text-background-200" [innerHTML]="resumoSobreMim.content.rendered"></div>
 
         <div class="flex align-self-end mt-16">
             <app-button
@@ -45,7 +46,18 @@
 </div>
 <div class="rdf__services">
     <div class="container mx-auto">
-        <fieldset>
+        <fieldset class="flex flex-row justify-end">
+            <legend class="text-6xl">Serviços</legend>
+        </fieldset>
+        <fieldset *ngFor="let categoria of categorias">
+            <ul class="justify-between ml-0 mb-8 mt-16 pl-0 list-none grid grid-cols-2">
+                <li *ngFor="let servico of servicosPorCategoria[categoria.id]" class="flex items-center mb-8 h-16">
+                    <img *ngIf="servico.acf?.icone_do_servico" [src]="servico.acf?.icone_do_servico" [alt]="servico.acf.nome_do_servico" class="h-16 w-16">
+                    <p class="rdf__services-text text-2xl ml-4 text-neutral-100">{{servico.acf?.nome_do_servico}}</p>
+                </li>
+            </ul>
+        </fieldset>
+        <!--<fieldset>
             <legend class="text-6xl">Serviços</legend>
             <ul class="justify-between ml-0 mb-8 mt-16 pl-0 list-none grid grid-cols-2">
                 <li class="flex col-6 items-center mb-8 h-16">
@@ -105,7 +117,7 @@
                     <p class="rdf__services-text text-2xl ml-4 text-neutral-100">Otimização de Performance de Websites</p>
                 </li>
             </ul>
-        </fieldset>
+        </fieldset>-->
     </div>
 </div>
 <div class="rdf__portfolio">

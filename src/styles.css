@@ -306,7 +306,7 @@
   background-color: #FFFFFF;
 }
 
-.text-background-100, .rdf__info p, .rdf__banner-text p, .rdf__button-neutral-large, .rdf__button-neutral-medium, .rdf__button-neutral-small, .rdf__button-background-large, .rdf__button-background-medium, .rdf__button-background-small, .rdf__button-highlight-large, .rdf__button-highlight-medium, .rdf__button-highlight-small, .rdf__button-accent-large, .rdf__button-accent-medium, .rdf__button-accent-small, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
+.text-background-100, .rdf__banner-text p, .rdf__button-neutral-large, .rdf__button-neutral-medium, .rdf__button-neutral-small, .rdf__button-background-large, .rdf__button-background-medium, .rdf__button-background-small, .rdf__button-highlight-large, .rdf__button-highlight-medium, .rdf__button-highlight-small, .rdf__button-accent-large, .rdf__button-accent-medium, .rdf__button-accent-small, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
   color: #FFFFFF;
 }
 
@@ -674,11 +674,15 @@
 .rdf__info {
   padding: 64px 0;
 }
+
 .rdf__services {
   padding: 96px 0 64px;
 }
 .rdf__services fieldset {
   border-top: 1px solid #333333;
+}
+.rdf__services fieldset:nth-child(2) {
+  border-top: none;
 }
 .rdf__services fieldset legend {
   margin-top: -40px;
