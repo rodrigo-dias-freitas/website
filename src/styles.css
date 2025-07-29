@@ -122,7 +122,7 @@
   line-height: 1rem;
 }
 
-.bg-primary-100, footer, .rdf__info, .navbar, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
+.bg-primary-100, .rdf__info, .navbar, .rdf__button-primary-large, .rdf__button-primary-medium, .rdf__button-primary-small {
   background-color: #001133;
 }
 
@@ -691,6 +691,14 @@
 .rdf__services-text {
   font-family: "Roboto", sans-serif;
 }
+@media (max-width: 639px) {
+  .rdf__services fieldset:first-of-type {
+    border-top: none;
+  }
+  .rdf__services fieldset:first-of-type legend {
+    text-align: center;
+  }
+}
 
 .rdf__portfolio {
   padding: 96px 0 64px;
@@ -711,15 +719,41 @@
 }
 
 footer {
-  display: block;
-  padding-top: 120px;
+  background-color: #001133;
+  color: #FFFFFF;
+  padding: 3rem 1rem;
 }
-footer .rdf__footer .rdf__logo {
-  width: 165px;
-  height: 165px;
+footer .rdf__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-footer .rdf__footer .rdf__footer-info {
-  margin-bottom: 253px;
+@media (min-width: 1024px) {
+  footer .rdf__footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+footer .rdf__footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .rdf__footer-info a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+footer .rdf__footer-info a:hover {
+  text-decoration: underline;
+}
+footer .rdf__footer-info .social {
+  display: flex;
+  margin-top: 1rem;
+}
+footer .rdf__logo {
+  width: 130px;
+  height: auto;
 }
 
 .rdf__service .rdf__QElement-name {
@@ -734,4 +768,18 @@ footer .rdf__footer .rdf__footer-info {
 
 .rdf__contact .rdf__QElement-name {
   font-size: 2rem !important;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
 }/*# sourceMappingURL=styles.css.map */
