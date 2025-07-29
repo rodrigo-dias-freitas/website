@@ -18,6 +18,7 @@ export class AboutMeComponent implements OnInit{
   tipos: any[] = [];
   elementosPorTipo: { [tipoId: string]: any[]} = {};
   linhas: { [linha: number]: any[]} = {};
+  formacoes: any[] = [];
 
   elementosPorColuna: {
     esquerda: { [linha: number]: any[] },
@@ -66,6 +67,10 @@ export class AboutMeComponent implements OnInit{
 
         this.elementosPorColuna[coluna][linha].push(el)
       });
+    });
+
+    this.wpService.getTodasFormacoes().subscribe((dados) => {
+      this.formacoes = dados.sort((a, b) => b.acf?.ano - a.acf?.ano);
     });
    
   }

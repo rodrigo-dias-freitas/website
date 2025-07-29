@@ -11,17 +11,9 @@
         <h2 class="text-neutral-100 text-4xl font-semibold">Formação</h2>
 
         <ul class="my-14">
-            <li class="text-neutral-100 text-base font-semibold mb-2">MBA em Planejamento Financeiro Pessoal e Familiar<br>
-                <p class="font-normal">Galícia -2024</p>
-            </li>
-            <li class="text-neutral-100 text-base font-semibold mb-2">Graduação em Gestão Financeira<br>
-                <p class="font-normal">Anhanguera - 2024</p>
-            </li>
-            <li class="text-neutral-100 text-base font-semibold mb-2">Pós-graduação em Design de Interfaces<br>
-                <p class="font-normal">Unicarioca - 2005</p>
-            </li>
-            <li class="text-neutral-100 text-base font-semibold">Tecnólogo em Ambientes Informatizados<br>
-                <p class="font-normal">Estácio de Sá - 2002</p>
+            <li *ngFor="let item of formacoes" class="text-neutral-100 text-base font-semibold mb-2">
+                {{item.acf?.formacao}}<br>
+                <p class="font-normal">{{ item.acf?.instituicao }} - {{ item.acf?.ano }}</p>
             </li>
         </ul>
         <h2 class="text-neutral-100 text-4xl font-semibold">Qualificações</h2>
