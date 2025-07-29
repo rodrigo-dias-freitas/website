@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class WpApiService {
 
-  private baseUrl = 'http://localhost/wordpress/wp-json/wp/v2';
+  private baseUrl = 'https://rodrigofreitas.dev.br/wordpress/wp-json/wp/v2';
 
   constructor(private http: HttpClient) { }
 
@@ -45,5 +45,9 @@ export class WpApiService {
 
   getTodosElementos(){
     return this.http.get<any[]>(`${this.baseUrl}/elemento?per_page=100`);
+  }
+
+  getTodasFormacoes(){
+    return this.http.get<any[]>(`${this.baseUrl}/education?per_page=100`);
   }
 }
