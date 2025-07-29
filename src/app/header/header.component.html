@@ -1,5 +1,5 @@
 <header>
-  <nav class="bg-primary-100 w-full shadow-md px-4 py-3">
+  <nav class="bg-primary-100 w-full shadow-md px-4 py-3 lg:py-0">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
 
       <!-- LOGO -->
@@ -19,7 +19,7 @@
       </button>
 
       <div class="w-full mt-4 lg:mt-0 lg:w-auto" [ngClass]="{ 'hidden': !menuOpen, 'block': menuOpen, 'lg:flex': true }">
-        <ul class="flex flex-col gap-4 lg:flex-row lg:gap-6">
+        <ul class="flex flex-col gap-4 lg:flex-row lg:gap-0">
           <li *ngFor="let item of navItems">
             <a [routerLink]="item.link" routerLinkActive="active-link" class="block" (click)="menuOpen = false">
               <div class="rdf__element flex flex-col justify-between">
