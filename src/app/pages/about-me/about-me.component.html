@@ -1,49 +1,63 @@
 <div class="rdf__about mt-[120px]">
-    <div class="flex flex-row justify-between container mx-auto">
-        <div class="col-2">
-            <img src="../../../assets/images/Rectangle.png" class="size-[200px]">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-4 flex justify-center mb-4 md:mb-0">
+            <img src="../../../assets/images/Rectangle.png" class="w-[200px] h-auto">
         </div>
-        <div *ngIf="postSobreMim" class="col-10 body-large text-neutral-100 mb-16" [innerHTML]="postSobreMim.content.rendered"></div>
-        
+
+        <div *ngIf="postSobreMim"
+            class="md:col-span-8 text-neutral-100 text-base px-4"
+            [innerHTML]="postSobreMim.content.rendered">
+        </div>
     </div>
     <div class="rdf__line col-6 flex flex-row justify-content-center items-center container h-1 my-16 mx-auto"></div>
-    <div class="container mx-auto">
-        <h2 class="text-neutral-100 text-4xl font-semibold">Formação</h2>
+    <div class="container mx-auto px-4">
+        <h2 class="text-neutral-100 text-3xl md:text-4xl font-semibold mb-6">Formação</h2>
 
-        <ul class="my-14">
-            <li *ngFor="let item of formacoes" class="text-neutral-100 text-base font-semibold mb-2">
-                {{item.acf?.formacao}}<br>
-                <p class="font-normal">{{ item.acf?.instituicao }} - {{ item.acf?.ano }}</p>
+        <ul class="space-y-6">
+            <li *ngFor="let item of formacoes" class="text-neutral-100">
+            <p class="text-base font-semibold">{{ item.acf?.formacao }}</p>
+            <p class="text-sm font-normal text-neutral-100">{{ item.acf?.instituicao }} - {{ item.acf?.ano }}</p>
             </li>
         </ul>
         <h2 class="text-neutral-100 text-4xl font-semibold">Qualificações</h2>
-        <div class="rdf__qualificacoes flex justify-center my-16">
-
+        <!-- BLOCO PARA DESKTOP -->
+        <div class="rdf__qualificacoes hidden md:flex justify-center my-16">
             <!-- Coluna esquerda -->
-            <div class="flex flex-col justify-end">
-                <div class="flex flex-row" *ngFor="let linha of [1, 2, 3]">
-                    <app-element
-                        *ngFor="let el of elementosPorColuna.esquerda[linha]"
-                        [extraClass]="el.acf?.element_class"
-                        [name]="el.acf?.element_name"
-                        [number]="el.acf?.element_number"
-                        [description]="el.acf?.element_description">
-                    </app-element>
+            <div class="flex md:flex-col justify-end">
+                <div class="flex flex-col md:flex-row" *ngFor="let linha of [1, 2, 3]">
+                <app-element
+                    *ngFor="let el of elementosPorColuna.esquerda[linha]"
+                    [extraClass]="el.acf?.element_class"
+                    [name]="el.acf?.element_name"
+                    [number]="el.acf?.element_number"
+                    [description]="el.acf?.element_description">
+                </app-element>
                 </div>
             </div>
 
             <!-- Coluna direita -->
             <div class="flex flex-col justify-end">
-                <div class="flex flex-row-reverse" *ngFor="let linha of [1, 2, 3]">
-                    <app-element
-                        *ngFor="let el of elementosPorColuna.direita[linha]"
-                        [extraClass]="el.acf?.element_class"
-                        [name]="el.acf?.element_name"
-                        [number]="el.acf?.element_number"
-                        [description]="el.acf?.element_description">
-                    </app-element>
+                <div class="flex flex-col md:flex-row-reverse" *ngFor="let linha of [1, 2, 3]">
+                <app-element
+                    *ngFor="let el of elementosPorColuna.direita[linha]"
+                    [extraClass]="el.acf?.element_class"
+                    [name]="el.acf?.element_name"
+                    [number]="el.acf?.element_number"
+                    [description]="el.acf?.element_description">
+                </app-element>
                 </div>
             </div>
+        </div>
+
+        <!-- BLOCO PARA MOBILE -->
+        <div class="flex flex-wrap justify-center gap-4 md:hidden my-8">
+            <app-element
+                *ngFor="let el of todosElementos"
+                [extraClass]="el.acf?.element_class"
+                [name]="el.acf?.element_name"
+                [number]="el.acf?.element_number"
+                [description]="el.acf?.element_description">
+            </app-element>
         </div>
         
     </div>
