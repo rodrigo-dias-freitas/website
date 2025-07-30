@@ -1,29 +1,41 @@
-<div class="container mx-auto rdf__service py-16">
-    <div class="flex flex-row mb-32">
-        <app-element
-        extraClass = "bg-highlight-100 text-neutral-100"
-        name = "S"
-        number = "02"
-        description = "Serviços"></app-element>
+<div class="container mx-auto rdf__service px-4 py-16">
+  <!-- Título -->
+  <div class="flex flex-col lg:flex-row items-start gap-6 w-full lg:w-2/3 mb-12">
+    <app-element
+      extraClass="bg-highlight-100 text-neutral-100"
+      name="S"
+      number="02"
+      description="Serviços">
+    </app-element>
 
-        <p class="ml-10 font-normal text-2xl">A seguir, conheça os detalhes dos serviços que ofereço para atender suas necessidades</p>
-    </div>
+    <p class="ml-0 lg:ml-10 text-lg lg:text-2xl text-neutral-100 text-left lg:text-start">
+      A seguir, conheça os detalhes dos serviços que ofereço para atender suas necessidades.
+    </p>
+  </div>
 
-    <div class="w-full space-y-2">
-        <div *ngFor="let section of sections; let i = index" class="border rounded-lg bg-accent-300 text-background-100">
-            <button (click)="toggleSection(i)" class="w-full flex justify-between items-center p-4 font-medium text-left text-background-100 bg-accent-200 hover:bg-accent-100 text-2xl">
-                <span>{{ section.title }}</span>
-                    <svg 
-                        class="w-5 h-5 transform transition-transform duration-300" 
-                        [ngClass]="{'rotate-180': section.open}"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-            </button>
-            <div class="px-4 py-2 transition-all duration-300 ease-in-out text-base my-8 mx-10" *ngIf="section.open"> {{ section.content }} </div>
-        </div>
+  <!-- Seções com acordeão -->
+  <div class="w-full space-y-4">
+    <div *ngFor="let section of sections; let i = index" class="border border-accent-100 rounded-lg bg-accent-300 text-background-100">
+      <button
+        (click)="toggleSection(i)"
+        class="w-full flex justify-between items-center p-4 font-medium text-left text-background-100 bg-accent-200 hover:bg-accent-100 text-xl sm:text-2xl transition-colors duration-300">
+        
+        <span>{{ section.title }}</span>
+
+        <svg 
+          class="w-5 h-5 transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': section.open }"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <div
+        class="px-4 sm:px-6 py-4 transition-all duration-300 ease-in-out text-base sm:text-lg"
+        *ngIf="section.open">
+        {{ section.content }}
+      </div>
     </div>
-    
-    
+  </div>
 </div>
