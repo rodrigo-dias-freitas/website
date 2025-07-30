@@ -85,6 +85,52 @@ Quer contribuir? Siga as recomendações.
 4. Envie para a branch (`git push origin feature/nova-feature`)
 5. Abra um Pull Request
 
+## 📘 Guia de Mensagens de Commit – Projeto Angular + WordPress Headless
+
+Siga o padrão **Conventional Commits** para manter o histórico limpo, organizado e legível.
+
+### 🔧 Estrutura do Projeto
+- `chore: iniciar estrutura base do projeto Angular`
+- `chore: instalar dependências iniciais (Angular, Tailwind etc.)`
+- `chore: configurar ambiente para integração com WordPress headless`
+
+### 🎨 Design e Estilo
+- `style: aplicar estilo responsivo com Tailwind`
+- `style: ajustar espaçamento e cores conforme o design system`
+- `style: corrigir alinhamento de elementos no header`
+
+### 🚀 Funcionalidades
+- `feat: integrar WordPress como CMS headless no Angular`
+- `feat: criar serviço para consumir posts via WP REST API`
+- `feat: exibir lista de postagens do WordPress na página inicial`
+- `feat: criar componente para exibir conteúdo dinâmico do WordPress`
+- `feat: implementar sistema de rotas no Angular`
+- `feat: adicionar animações com Framer Motion`
+
+### 🧱 Componentes
+- `feat: criar componente de header com navegação`
+- `feat: criar componente de footer com redes sociais`
+- `feat: criar componente de card para posts`
+- `feat: criar loader para carregamento de dados da API`
+
+### 🛠️ Refatorações e Melhorias
+- `refactor: separar lógica de consumo de API em service dedicado`
+- `refactor: reorganizar componentes em módulos específicos`
+- `refactor: renomear arquivos para seguir padrão de nomenclatura`
+
+### 🐛 Correções
+- `fix: corrigir erro ao carregar dados do WordPress`
+- `fix: ajustar tamanho de imagem nos cards de postagens`
+- `fix: resolver problema de rolagem em dispositivos móveis`
+
+### 📄 Documentação
+- `docs: adicionar instruções de uso do CMS headless no README`
+- `docs: atualizar seção de instalação e execução do projeto`
+
+### 📦 Deploy/Build
+- `build: gerar versão de produção para publicação`
+- `build: configurar build do Angular para ambiente de produção`
+
 
 ## Histórico
 
