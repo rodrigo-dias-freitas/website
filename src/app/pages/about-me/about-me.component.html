@@ -1,7 +1,7 @@
 <div class="rdf__about mt-[120px]">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
         <div class="md:col-span-4 flex justify-center mb-4 md:mb-0">
-            <img src="../../../assets/images/Rectangle.png" class="w-[200px] h-auto">
+            <img src="../../../assets/images/Foto_rosto.jpg" class="w-[200px] h-auto">
         </div>
 
         <div *ngIf="postSobreMim"
@@ -13,13 +13,13 @@
     <div class="container mx-auto px-4">
         <h2 class="text-neutral-100 text-3xl md:text-4xl font-semibold mb-6">Formação</h2>
 
-        <ul class="space-y-6">
+        <ul class="space-y-6 mb-9">
             <li *ngFor="let item of formacoes" class="text-neutral-100">
             <p class="text-base font-semibold">{{ item.acf?.formacao }}</p>
             <p class="text-sm font-normal text-neutral-100">{{ item.acf?.instituicao }} - {{ item.acf?.ano }}</p>
             </li>
         </ul>
-        <h2 class="text-neutral-100 text-4xl font-semibold">Qualificações</h2>
+        <h2 class="text-neutral-100 text-4xl font-semibold mb-6">Qualificações</h2>
         <!-- BLOCO PARA DESKTOP -->
         <div class="rdf__qualificacoes hidden md:flex justify-center my-16">
             <!-- Coluna esquerda -->
