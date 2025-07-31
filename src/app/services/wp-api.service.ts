@@ -50,4 +50,8 @@ export class WpApiService {
   getTodasFormacoes(){
     return this.http.get<any[]>(`${this.baseUrl}/education?per_page=100`);
   }
+
+  getPostsBlog(): Observable<any>{
+    return this.http.get<any[]>(`${this.baseUrl}/posts?categories=13`);
+  }
 }

@@ -16,8 +16,8 @@ export class HeaderComponent {
   navItems = [
     { number: '01', symbol: 'Sm', label: 'Sobre mim', link: '/sobre-mim' },
     { number: '02', symbol: 'S', label: 'Serviços', link: '/services' },
-    /*{ number: '03', symbol: 'Pf', label: 'Portfolio', link: '#' },
-    { number: '04', symbol: 'B', label: 'Blog', link: '#' },*/
+    /*{ number: '03', symbol: 'Pf', label: 'Portfolio', link: '#' },*/
+    { number: '04', symbol: 'B', label: 'Blog', link: '/blog' },
     { number: '05', symbol: 'Ct', label: 'Contato', link: '/contato' },
   ];
 
