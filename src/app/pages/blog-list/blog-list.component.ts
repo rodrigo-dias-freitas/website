@@ -19,13 +19,18 @@ import { dateTimestampProvider } from 'rxjs/internal/scheduler/dateTimestampProv
 export class BlogListComponent implements OnInit {
 
   posts: any[] = [];
+  subcategoriasBlog: any[] = [];
 
   constructor(private wpService: WpApiService){}
 
   ngOnInit(): void {
-    this.wpService.getPostsBlog().subscribe((data => {
+    this.wpService.getPostsBlog().subscribe((data) => {
       this.posts = data
-    }))
+    });
+
+    this.wpService.getSubcategoriasBlog().subscribe((data) => {
+      this.subcategoriasBlog = data;
+    });
   }
 
 }

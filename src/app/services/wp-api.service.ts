@@ -52,6 +52,11 @@ export class WpApiService {
   }
 
   getPostsBlog(): Observable<any>{
-    return this.http.get<any[]>(`${this.baseUrl}/posts?categories=13`);
+    return this.http.get<any[]>(`${this.baseUrl}/posts?categories=13&_embed`);
+  }
+
+  getSubcategoriasBlog(): Observable<any[]>{
+     const blogCategoryId = 13;
+     return this.http.get<any[]>(`${this.baseUrl}/categories?parent=${blogCategoryId}`);
   }
 }
