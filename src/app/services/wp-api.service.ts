@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, switchMap, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class WpApiService {
   constructor(private http: HttpClient) { }
 
   getPosts(): Observable<any[]>{
-    return this.http.get<any[]>(`${this.baseUrl}/posts`);
+    return this.http.get<any[]>(`${this.baseUrl}/posts?_embed&per_page=100`);
   }
 
   getPostsById(id:number){
@@ -59,4 +59,30 @@ export class WpApiService {
      const blogCategoryId = 13;
      return this.http.get<any[]>(`${this.baseUrl}/categories?parent=${blogCategoryId}`);
   }
+
+  getPostBySlug(slug: string): Observable<any>{
+    return this.http.get<any[]>(`${this.baseUrl}/posts?slug=${slug}&_embed`);
+  }
+
+  getPostsDasSubcategoriasDoBlog(): Observable<any[]>{
+    const categoriaPai = 13;
+
+    return this.getSubcategoriasBlog().pipe(
+      map(subcats => subcats.map(cat => cat.id)),
+      switchMap((ids: number[]) => {
+        const categoriasParam = ids.join(',');
+        return this.http.get<any[]>(`${this.baseUrl}/posts?categories=${categoriasParam}&_embed&per_page=100`);
+      })
+    )
+  }
+
+  getCategoriaBySlug(slug:string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/categories?slug=${slug}`);
+  }
+
+  getPostsByCategoriaId(id:number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/posts?categories=${id}&_embed`);
+  }
+
+
 }

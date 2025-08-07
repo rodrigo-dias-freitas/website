@@ -1,0 +1,19 @@
+<div class="container mx-auto  py-16 px-4 text-neutral-100">
+    <a routerLink="/blog" class="inline-flex items-center text-accent-100 hover:underline mb-8">← Voltar para o blog</a>
+
+    <h1 class="text-4xl font-bold mb-10">Posts da categoria: <span class="text-accent-100">{{categoria?.name}}</span></h1>
+
+    <div *ngIf="posts.length > 0; else semPosts">
+        <ul class="grid md:grid-cols-2 gap-8">
+            <li *ngFor="let post of posts" class="bg-background-300 p-6 rounded shadow">
+                <a [routerLink]="['/blog', post.slug]" class="text-2xl font-semibold hover:underline block mb-2">
+                    {{post.title.rendered}}
+                </a>
+                <p [innerHTML]="post.excerpt.rendered" class="text-neutral-200 text-base"></p>
+            </li>
+        </ul>
+    </div>
+    <ng-template #semPosts>
+        <p class="text-neutral-300">Nenhum post encontrado nesta categoria.</p>
+    </ng-template>
+</div>

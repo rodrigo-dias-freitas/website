@@ -102,4 +102,33 @@
         </div>
     </div>
 </div>
+<section class="bg-background-200 py-16 text-neutral-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-semibold mb-8">Últimos do Blog</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div *ngFor="let post of postsBlog" class="bg-background-300 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <img *ngIf="post._embedded?.['wp:featuredmedia']?.[0]?.source_url"
+             [src]="post._embedded['wp:featuredmedia'][0].source_url"
+             alt="Imagem do post"
+             class="w-full h-48 object-cover rounded mb-4" />
+
+        <h3 class="text-xl font-bold mb-2">{{ post.title.rendered }}</h3>
+
+        <p class="text-sm mb-4">{{ post.date | date: 'dd/MM/yyyy' }}</p>
+
+        <a [routerLink]="['/blog', post.slug]" class="text-accent-100 hover:underline">
+          Leia mais →
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center">
+      <a routerLink="/blog" class="inline-block bg-accent-100 text-background-100 px-6 py-2 rounded hover:bg-accent-200 transition">
+        Ver todos os posts
+      </a>
+    </div>
+  </div>
+</section>
+
 

@@ -39,9 +39,21 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
-      }
+      },
+      typography: {
+        invert: {
+          css: {
+            color: '#F3F4F6', // text-neutral-100
+            a: { color: '#FF4433' },
+            h1: { color: '#FFFFFF' },
+            h2: { color: '#FFFFFF' },
+            h3: { color: '#FFFFFF' },
+            'ul > li::marker': { color: '#FF4433' },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
 

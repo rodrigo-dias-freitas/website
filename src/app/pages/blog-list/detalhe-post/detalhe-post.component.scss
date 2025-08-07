@@ -1,0 +1,10 @@
+::ng-deep .prose {
+  line-height: 1.6;
+  p {
+    margin-bottom: 1rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

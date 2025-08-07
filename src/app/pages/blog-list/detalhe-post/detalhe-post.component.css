@@ -1,0 +1,10 @@
+::ng-deep .prose {
+  line-height: 1.6;
+}
+::ng-deep .prose p {
+  margin-bottom: 1rem;
+}
+::ng-deep .prose img {
+  max-width: 100%;
+  height: auto;
+}/*# sourceMappingURL=detalhe-post.component.css.map */

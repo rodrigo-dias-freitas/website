@@ -3,6 +3,7 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { WpApiService } from '../../services/wp-api.service';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   imports: [
     ButtonComponent,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -21,6 +23,7 @@ export class HomeComponent implements OnInit {
   categorias: any[] = [];
   servicosPorCategoria: { [categoria: string]: any[]} = {};
   resumoSobreMim: any = null;
+  postsBlog: any[] = [];
 
   
 
@@ -38,7 +41,7 @@ export class HomeComponent implements OnInit {
       }
     });
 
-     this.wpService.getTiposDeServico().subscribe((categorias) => {
+    this.wpService.getTiposDeServico().subscribe((categorias) => {
       this.categorias = categorias;
 
       this.wpService.getTodosServicos().subscribe((servicos) => {
@@ -46,6 +49,10 @@ export class HomeComponent implements OnInit {
         this.organizarServicosPorCategoria(servicos);
 
       });
+    });
+
+    this.wpService.getPostsDasSubcategoriasDoBlog().subscribe((posts) => {
+      this.postsBlog = posts.slice(0, 3);
     });
   }
 

@@ -15,13 +15,15 @@
 
             <div class="text-neutral-200" [innerHTML]="post.excerpt.rendered"></div>
 
-            <a [routerLink]="['/blog', post.id]" class="text-highlight-100 underline mt-2 block">Saiba mais</a>
+            <a [routerLink]="['/blog', post.slug]" class="text-accent-200 underline mt-2 block">Saiba mais</a>
         </div>
     </div>
-    <div>
-        <h2 class="text-4xl font-semibold text-neutral-100 mb-8">Categorias</h2>
-        <ul *ngIf="subcategoriasBlog.length > 0">
-            <li *ngFor="let sub of subcategoriasBlog"><a [routerLink]="['/blog/categoria', sub.slug]">{{ sub.name }}</a></li>
+    <div class="my-12">
+        <h2 class="text-4xl font-semibold text-neutral-100 mb-6">Categorias</h2>
+        <ul *ngIf="subcategoriasBlog.length > 0" class="flex flex-wrap gap-4">
+            <li *ngFor="let sub of subcategoriasBlog">
+                <a [routerLink]="['/blog/categoria', sub.slug]" class="px-4 py-2 rounded bg-accent-100 text-background-100 hover:bg-accent-200 transition">{{ sub.name }}</a>
+            </li>
         </ul>
     </div>
 </div>
