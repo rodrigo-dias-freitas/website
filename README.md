@@ -76,6 +76,7 @@ Para visualizar as alterações feitas, rode o servidor localmente utilizando ng
 Para manter uma melhor organizaçãodas releases, siga as recomendações da [Semantic Versioning 2.0.0](https://semver.org/).
 
 - [v1.0.0](https://github.com/rodrigo-dias-freitas/website/releases/tag/v1.0.0) : Primeira versão pública
+- [v1.1.1](https://github.com/rodrigo-dias-freitas/website/releases/tag/v1.1.1) : Versão com blog
 
 ## Contribuição
 
